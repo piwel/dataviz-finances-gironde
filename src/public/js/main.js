@@ -12,11 +12,11 @@ import csvStringToM52Instructions from '../../shared/js/finance/csvStringToM52In
 
 import Home from './components/screens/Home';
 import FinanceElement from './components/screens/FinanceElement';
-import Focus from './components/screens/Focus';
+import FocusSolidarity from './components/screens/FocusSolidarity';
 import Strategy from './components/screens/Strategy';
 import TotalBudget from './components/screens/TotalBudget';
 
-import { HOME } from './constants/pages';
+import { HOME, SOLIDARITES, INVEST, PRESENCE } from './constants/pages';
 import { M52_INSTRUCTION_RECEIVED, ATEMPORAL_TEXTS_RECEIVED, YEAR_TEXTS_RECEIVED, LABELS_RECEIVED, BREADCRUMB_CHANGE } from './constants/actions';
 
 
@@ -35,7 +35,8 @@ const REACT_CONTAINER_SELECTOR = '.cd33-finance-dataviz';
 const CONTAINER_ELEMENT = document.querySelector(REACT_CONTAINER_SELECTOR);
 
 const StoreRecord = Record({
-    m52Instruction: undefined,
+    m52InstructionByYear: undefined,
+    currentYear: undefined,
     // ImmutableMap<id, FinanceElementTextsRecord>
     textsById: undefined,
     breadcrumb: undefined
@@ -44,6 +45,8 @@ const StoreRecord = Record({
 const store = createStore(
     reducer,
     new StoreRecord({
+        m52InstructionByYear: new ImmutableMap(),
+        currentYear: 2016,
         breadcrumb: new List([HOME]),
         textsById: ImmutableMap([[HOME, {label: 'Acceuil'}]])
     })
@@ -56,18 +59,29 @@ const store = createStore(
  * Fetching initial data
  * 
  */
-fetch(DATA_URL_PREFIX+'/data/finances/cedi_2015_CA.csv').then(resp => resp.text())
-    .then(csvStringToM52Instructions)
-    .then(m52Instruction => {
-        store.dispatch({
-            type: M52_INSTRUCTION_RECEIVED,
-            m52Instruction,
+[
+    DATA_URL_PREFIX+'/data/finances/cedi_2016_CA.csv',
+    DATA_URL_PREFIX+'/data/finances/cedi_2015_CA.csv',
+    DATA_URL_PREFIX+'/data/finances/cedi_2014_CA.csv',
+    DATA_URL_PREFIX+'/data/finances/cedi_2013_CA.csv',
+    DATA_URL_PREFIX+'/data/finances/cedi_2012_CA.csv',
+    DATA_URL_PREFIX+'/data/finances/cedi_2011_CA.csv',
+    DATA_URL_PREFIX+'/data/finances/cedi_2010_CA.csv',
+    DATA_URL_PREFIX+'/data/finances/cedi_2009_CA.csv'
+].forEach(url => {
+    fetch(url).then(resp => resp.text())
+        .then(csvStringToM52Instructions)
+        .then(m52Instruction => {
+            store.dispatch({
+                type: M52_INSTRUCTION_RECEIVED,
+                m52Instruction,
+            });
         });
-    });
+});
 
 [
     DATA_URL_PREFIX+'/data/texts/aggregated-atemporal.csv',
-    DATA_URL_PREFIX+'/data/texts/m52-fonctions-atemporal.csv'
+    //DATA_URL_PREFIX+'/data/texts/m52-fonctions-atemporal.csv'
 ].forEach(url => {
     fetch(url).then(resp => resp.text())
         .then(csvParse)
@@ -81,7 +95,7 @@ fetch(DATA_URL_PREFIX+'/data/finances/cedi_2015_CA.csv').then(resp => resp.text(
 
 [
     DATA_URL_PREFIX+'/data/texts/aggregated-2015.csv',
-    DATA_URL_PREFIX+'/data/texts/m52-fonctions-2015.csv'
+    //DATA_URL_PREFIX+'/data/texts/m52-fonctions-2015.csv'
 ].forEach(url => {
     fetch(url).then(resp => resp.text())
         .then(csvParse)
@@ -96,7 +110,7 @@ fetch(DATA_URL_PREFIX+'/data/finances/cedi_2015_CA.csv').then(resp => resp.text(
 
 [
     DATA_URL_PREFIX+'/data/texts/aggregated-labels.csv',
-    DATA_URL_PREFIX+'/data/texts/m52-fonctions-labels.csv'
+    //DATA_URL_PREFIX+'/data/texts/m52-fonctions-labels.csv'
 ].forEach(url => {
     fetch(url).then(resp => resp.text())
         .then(csvParse)
@@ -175,21 +189,14 @@ page('/finance-details/:contentId', ({params: {contentId}}) => {
     );
 });
 
-page('/focus/:focusId', ({params: {focusId}}) => {
-    console.log('in route', '/focus', focusId);
-
-    const breadcrumb = store.getState().breadcrumb;
-
-    store.dispatch({
-        type: BREADCRUMB_CHANGE,
-        breadcrumb: breadcrumb.push(focusId)
-    });
+page('/focus/'+SOLIDARITES, () => {
+    console.log('in route', '/focus/'+SOLIDARITES);
 
     ReactDOM.render(
         React.createElement(
             Provider,
             { store },
-            React.createElement(Focus)
+            React.createElement(FocusSolidarity)
         ),
         CONTAINER_ELEMENT
     );

@@ -49,12 +49,13 @@
     align-self: flex-end;
 }
 
+$circle-radius : 38em;
 
 .appetizer.total-appetizer{
     border: 1.5em solid white;
     margin: 0;
-    width: 38em;
-    height: 38em;
+    width: $circle-radius;
+    height: $circle-radius;
     border-radius: 50%;
 
     position: relative;
@@ -78,7 +79,7 @@
 
 
 .appetizer.total-appetizer .total{
-    font-size: 6.5em;
+    font-size: 5.5em;
     letter-spacing: -10px;
 
 }

@@ -11,12 +11,13 @@ import { SOLIDARITES, INVEST, PRESENCE } from '../../constants/pages';
 
 export function Home({
     expenditures,
+    currentYear,
     urls: {
         total,
-        solidarities, invest, presence
+        solidarity, invest, presence
     }
 }) {
-
+    
     return React.createElement('article', {className: 'home'},
         React.createElement('h1', {}, "Un budget au service d'une solidarité humaine et territoriale"),
         React.createElement('p', {}, "Ce budget est composé de dépenses de fonctionnement, nécessaires aux missions et gestion des services de la collectivité, et de dépenses d’investissement dédiées à des programmes structurants ou stratégiques pour le territoire."),
@@ -24,7 +25,7 @@ export function Home({
         React.createElement('section', {className: 'appetizers'},
             React.createElement(TotalAppetizer, {
                 total: expenditures,
-                year: 2016,
+                year: currentYear,
                 totalUrl: total
             }),
             React.createElement(Appetizer, {
@@ -33,7 +34,7 @@ export function Home({
                 numberSecundary: "bénéficiaires",
                 description: `Le Département affirme sa vocation sociale et déploie près de 900 millions d’euros pour aider et accompagner les personnes fragilisées.
                 Il emploie 1751 agents au service de l’action sociale soit près de 77 millions par an en frais de personnel pour assurer l’efficience et la proximité du service rendus aux publics les plus fragiles. A cela s’ajoute 937 assistants familiaux qui accueillent des enfants faisant l’objet de mesures de placement.`, 
-                moreUrl: solidarities
+                moreUrl: solidarity
             }),
             React.createElement(Appetizer, {
                 h1: "Des investissements ambitieux",
@@ -85,14 +86,16 @@ export function Home({
 
 export default connect(
     state => {
-        const { m52Instruction } = state;
+        const { m52InstructionByYear, currentYear } = state;
+        const m52Instruction = m52InstructionByYear.get(currentYear);
         const balance = m52Instruction ? budgetBalance(m52Instruction) : {};
 
         return Object.assign(
             {
+                currentYear,
                 urls: {
                     total: '#!/total',
-                    solidarities: '#!/focus/'+SOLIDARITES, 
+                    solidarity: '#!/focus/'+SOLIDARITES, 
                     invest: '#!/focus/'+INVEST, 
                     presence: '#!/focus/'+PRESENCE
                 }
