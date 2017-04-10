@@ -65,6 +65,8 @@ h1, h2, h3 {
   width: 80vw; }
   .cd33-finance-dataviz > * {
     width: 100%; }
+  .cd33-finance-dataviz * {
+    font-family: 'Roboto', sans-serif; }
 
 .placeholder {
   width: 100%;
@@ -80,19 +82,19 @@ h1, h2, h3 {
 .appetizer {
   max-width: 50%;
   padding: 1em;
-  margin: 3em 0;
+  margin: 10em 0;
   background-color: white;
   box-shadow: 0 0 2px black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-
-.appetizer:nth-child(even) {
-  align-self: flex-end; }
-
-.appetizer:nth-child(odd) {
-  align-self: flex-start; }
+  .appetizer:first-of-type {
+    margin: 4em 0; }
+  .appetizer:nth-child(even) {
+    align-self: flex-end; }
+  .appetizer:nth-child(odd) {
+    align-self: flex-start; }
 
 .appetizer .info {
   display: flex;
@@ -178,15 +180,17 @@ h1, h2, h3 {
   border-radius: 5px;
   background-color: #D8D8D8; }
 
-.budget-construction .texts {
+.budget-construction dl {
   height: 10em;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
-  .budget-construction .texts .column {
+  .budget-construction dl .column {
     width: 30%;
     display: flex;
     flex-direction: column; }
+  .budget-construction dl dt {
+    font-weight: bold; }
 
 .home {
   display: flex;
@@ -195,8 +199,12 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column; }
   .home .appetizers {
-    background-color: #A5D326;
-    margin-top: 5em; }
+    background: url(/images/map-optimised.jpg), transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 9em;
+    min-height: 2470px; }
 
 .finance-element .ratios {
   width: 30%;
