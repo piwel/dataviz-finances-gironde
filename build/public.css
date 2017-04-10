@@ -198,8 +198,26 @@ h1, h2, h3 {
     background-color: #A5D326;
     margin-top: 5em; }
 
-.finance-element .partition a:hover {
-  background-color: lightgrey; }
+.finance-element .ratios {
+  width: 30%;
+  float: left;
+  margin-right: 1em; }
+  .finance-element .ratios .proportion-container {
+    width: 100%;
+    height: 2em;
+    background-color: lightgrey;
+    color: white;
+    text-shadow: 0 0 2px black; }
+    .finance-element .ratios .proportion-container .proportion {
+      height: 100%;
+      background-color: darkslategrey;
+      white-space: nowrap; }
+
+.finance-element h2 {
+  clear: both; }
+
+.finance-element .atemporal p {
+  margin-top: 0; }
 
 .finance-element .partition a {
   display: block;
@@ -208,6 +226,8 @@ h1, h2, h3 {
   text-decoration: none;
   padding: 0.5em;
   margin: 0.5em 0; }
+  .finance-element .partition a:hover {
+    background-color: lightgrey; }
 
 .total-budget .viz {
   display: flex;
