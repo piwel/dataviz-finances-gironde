@@ -280,7 +280,7 @@ body {
     padding-bottom: 1em;
     flex: 1; }
     .finance-element .partition a .text h1 {
-      font-size: 1.1em; }
+      font-size: 2em; }
   .finance-element .partition a:not(:last-child)::before {
     content: '';
     font-size: 1.2em;
