@@ -330,7 +330,8 @@ body {
 
 .focus-detail {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  margin-bottom: 4em; }
   .focus-detail .illustration {
     flex: 1;
     display: flex;
