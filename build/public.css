@@ -222,6 +222,9 @@ body {
 .finance-element-pie .arc:nth-child(3) path {
   fill: lightgrey; }
 
+.finance-element > section {
+  margin-bottom: 5em; }
+
 .finance-element .ratios {
   width: 30%;
   float: left;
@@ -242,6 +245,13 @@ body {
 
 .finance-element .atemporal p {
   margin-top: 0; }
+
+.finance-element .over-time .content rect {
+  fill: cornflowerblue; }
+
+.finance-element .over-time .content text {
+  font-size: 1.2em;
+  font-weight: bold; }
 
 .finance-element .partition a {
   display: flex;
@@ -311,12 +321,12 @@ body {
 .total-budget .di {
   background-color: #E06666; }
 
-.d3-axis .tick line {
-  stroke: black;
+.d3-axis line {
+  stroke: grey;
   stroke-width: 1px; }
 
-.d3-axis .tick text {
-  fill: black; }
+.d3-axis text {
+  fill: grey; }
 
 .focus-detail {
   display: flex;
@@ -351,8 +361,8 @@ body {
         flex-direction: column;
         align-items: center;
         padding: 1em; }
-        .focus-detail .explanation .highlights > *:not(:first-child):not(:last-child) {
-          margin: 0 2em; }
+        .focus-detail .explanation .highlights > *:not(:first-child) {
+          margin-left: 2em; }
         .focus-detail .explanation .highlights > * strong, .focus-detail .explanation .highlights > * span {
           display: block; }
 
@@ -370,6 +380,9 @@ body {
   fill: #D1D1D1; }
   .focus-donut text.percentage .percent {
     fill: #F62727; }
+
+.focus > section {
+  margin-bottom: 5em; }
 
 .top-infos {
   display: flex;
