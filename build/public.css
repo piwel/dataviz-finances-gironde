@@ -58,15 +58,15 @@ body {
   justify-content: start;
   align-items: center; }
 
-h1, h2, h3 {
-  margin: 0.2em 0; }
-
 .cd33-finance-dataviz {
-  width: 80vw; }
+  width: 80vw;
+  font-family: 'Roboto', sans-serif; }
   .cd33-finance-dataviz > * {
     width: 100%; }
-  .cd33-finance-dataviz * {
-    font-family: 'Roboto', sans-serif; }
+  .cd33-finance-dataviz h1, .cd33-finance-dataviz h2, .cd33-finance-dataviz h3 {
+    margin: 0.2em 0; }
+  .cd33-finance-dataviz h1 {
+    font-size: 4em; }
 
 .placeholder {
   width: 100%;
@@ -165,7 +165,13 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     width: 18%; }
+    .budget-construction .bricks .column .total {
+      font-weight: bold;
+      font-size: 0.7em; }
+      .budget-construction .bricks .column .total .number {
+        font-size: 3em; }
     .budget-construction .bricks .column .brick {
       background-color: indianred;
       padding: 0.5em;
@@ -199,7 +205,7 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column; }
   .home .appetizers {
-    background: url(/images/map-optimised.jpg), transparent;
+    background: url(../images/map-optimised.jpg), transparent;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -314,6 +320,42 @@ h1, h2, h3 {
         .focus-detail .explanation .highlights > * strong, .focus-detail .explanation .highlights > * span {
           display: block; }
 
+.focus-donut .arc path {
+  fill: #D1D1D1; }
+
+.focus-donut .arc.highlighted path {
+  fill: #F62727; }
+
+.focus-donut text {
+  font-weight: bold; }
+
+.focus-donut text.percentage {
+  font-size: 6em;
+  fill: #D1D1D1; }
+  .focus-donut text.percentage .percent {
+    fill: #F62727; }
+
+.top-infos {
+  display: flex;
+  flex-direction: row; }
+  .top-infos > * {
+    flex: 1; }
+  .top-infos .people-fraction {
+    background-image: url(../images/bonhomme.svg);
+    background-size: contain;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold; }
+    .top-infos .people-fraction > * {
+      position: absolute;
+      left: 50%;
+      width: 50%;
+      transform: translateY(50%); }
+    .top-infos .people-fraction .number {
+      font-size: 4em;
+      color: #F62727; }
+
 .solidarity-by-year svg .d3-axis.x .tick line {
   stroke: grey;
   stroke-width: 1px; }
@@ -346,7 +388,7 @@ h1, h2, h3 {
   fill: #F35D32; }
 
 .solidarity-by-year svg .content .column .DF-1-other rect {
-  fill: purple; }
+  fill: #c564a9; }
 
 .solidarity-by-year svg .content .column text {
   fill: white; }
