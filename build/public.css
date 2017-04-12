@@ -89,13 +89,45 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  font-size: 14px; }
   .appetizer:first-of-type {
     margin: 4em 0; }
   .appetizer:nth-child(even) {
     align-self: flex-end; }
   .appetizer:nth-child(odd) {
     align-self: flex-start; }
+  .appetizer h1 {
+    font-size: 2.5em;
+    text-transform: uppercase; }
+  .appetizer p {
+    line-height: 1.8em;
+    max-width: 80%; }
+  .appetizer.total-appetizer {
+    border: 1.5em solid white;
+    margin: 0;
+    width: 38em;
+    height: 38em;
+    border-radius: 50%;
+    position: relative;
+    left: 10%;
+    /* % relative to parent width */
+    transform: translateY(-25%);
+    /* % relative to element height */
+    background-color: #EDEDED;
+    box-shadow: 0 0 0;
+    text-align: center;
+    color: #4A4A4A; }
+    .appetizer.total-appetizer h1 {
+      font-size: 1.5em; }
+    .appetizer.total-appetizer .total {
+      font-size: 5.5em;
+      letter-spacing: -10px; }
+    .appetizer.total-appetizer hr {
+      width: 80%;
+      border-width: 1px 0 0 0; }
+    .appetizer.total-appetizer a {
+      align-self: center; }
 
 .appetizer .info {
   display: flex;
@@ -139,8 +171,7 @@ body {
   font-size: 14px; }
 
 .appetizer.total-appetizer h1 {
-  font-size: 1.5em;
-  text-transform: uppercase; }
+  font-size: 1.5em; }
 
 .appetizer.total-appetizer .total {
   font-size: 5.5em;
@@ -291,10 +322,24 @@ body {
 
 .total-budget .viz {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-around; }
+  .total-budget .viz > * {
+    width: 30%; }
+  .total-budget .viz h1 {
+    font-size: 2em;
+    text-align: center; }
+  .total-budget .viz a {
+    color: black;
+    text-decoration: none; }
+    .total-budget .viz a .rf, .total-budget .viz a .ri, .total-budget .viz a .df, .total-budget .viz a .di {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
 
-.total-budget .viz > * {
-  flex: 1; }
+.total-budget section {
+  margin-bottom: 3em; }
 
 .total-budget .expenditures,
 .total-budget .revenue {
@@ -310,16 +355,16 @@ body {
   justify-content: flex-end; }
 
 .total-budget .rf {
-  background-color: #C9DAF8; }
+  background-color: #68B0CD; }
 
 .total-budget .ri {
-  background-color: #3D85C6; }
+  background-color: #b5d8e6; }
 
 .total-budget .df {
-  background-color: #EA9999; }
+  background-color: #F35D32; }
 
 .total-budget .di {
-  background-color: #E06666; }
+  background-color: #f9a992; }
 
 .d3-axis line {
   stroke: grey;
