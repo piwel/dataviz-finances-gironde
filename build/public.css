@@ -231,6 +231,9 @@ body {
     flex-direction: column; }
   .budget-construction dl dt {
     font-weight: bold; }
+  .budget-construction dl dd {
+    margin: 0;
+    margin-bottom: 1em; }
 
 .home {
   display: flex;
