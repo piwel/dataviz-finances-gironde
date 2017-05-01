@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
@@ -189,7 +190,7 @@ body {
   align-self: center; }
 
 .budget-construction .bricks {
-  height: 20em;
+  height: 30em;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
@@ -204,14 +205,53 @@ body {
       font-size: 0.7em; }
       .budget-construction .bricks .column .total .number {
         font-size: 3em; }
-    .budget-construction .bricks .column .brick {
-      background-color: indianred;
-      padding: 0.5em;
-      margin: 0.5em 0;
-      width: 100%;
-      border-radius: 5px;
+    .budget-construction .bricks .column .parent {
+      opacity: 1;
+      background-color: transparent;
+      color: transparent;
+      position: relative;
+      padding: 0;
+      text-align: center;
       font-weight: bold;
-      text-align: center; }
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%; }
+      .budget-construction .bricks .column .parent .brick {
+        background-color: indianred;
+        color: black;
+        padding: 0.5em;
+        margin: 0;
+        width: 100%;
+        border-radius: 5px;
+        position: relative; }
+        .budget-construction .bricks .column .parent .brick.appear-by-opacity {
+          opacity: 0; }
+        .budget-construction .bricks .column .parent .brick.appear-by-height {
+          height: 0;
+          padding: 0;
+          overflow: hidden; }
+      .budget-construction .bricks .column .parent .legend, .budget-construction .bricks .column .parent .brick .legend {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0; }
+      .budget-construction .bricks .column .parent .filling-container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 0;
+        color: transparent; }
+        .budget-construction .bricks .column .parent .filling-container .filling {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          height: 0;
+          transition-property: height;
+          opacity: 0.2;
+          background-color: black; }
 
 .budget-construction hr {
   height: 1em;
@@ -235,6 +275,39 @@ body {
     margin: 0;
     margin-bottom: 1em; }
 
+/*
+    ANIMATION
+*/
+@keyframes brick-appear {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes englobed-by-parent {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes parent-englobes {
+  from {
+    background-color: transparent;
+    color: transparent; }
+  to {
+    background-color: lightskyblue;
+    color: black; } }
+
+.budget-construction .bricks .brick {
+  animation-fill-mode: forwards; }
+
+/*
+    Questions animations : 
+    * à quels identifiants de l'agrégé correspondent les briques ?
+    * l'espacement entre les briques ne correspond à rien. Si on respecte les proportions le total est 
+    visuellement plus petit que la somme des parties
+
+*/
 .home {
   display: flex;
   flex-direction: column; }
