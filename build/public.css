@@ -65,10 +65,8 @@ body {
   padding-bottom: 40vh; }
   .cd33-finance-dataviz > * {
     width: 100%; }
-  .cd33-finance-dataviz h1, .cd33-finance-dataviz h2, .cd33-finance-dataviz h3 {
+  .cd33-finance-dataviz h2, .cd33-finance-dataviz h3 {
     margin: 0.2em 0; }
-  .cd33-finance-dataviz h1 {
-    font-size: 4em; }
 
 .placeholder {
   width: 100%;
@@ -91,16 +89,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 14px; }
+  font-size: 14px;
+  z-index: 2; }
   .appetizer:first-of-type {
     margin: 4em 0; }
-  .appetizer:nth-child(even) {
-    align-self: flex-end; }
   .appetizer:nth-child(odd) {
+    align-self: flex-end; }
+  .appetizer:nth-child(even) {
     align-self: flex-start; }
   .appetizer h1 {
-    font-size: 2.5em;
-    text-transform: uppercase; }
+    align-self: flex-start;
+    width: 100%; }
   .appetizer p {
     line-height: 1.8em;
     max-width: 80%; }
@@ -123,10 +122,15 @@ body {
       font-size: 1.5em; }
     .appetizer.total-appetizer .total {
       font-size: 5.5em;
-      letter-spacing: -10px; }
+      letter-spacing: -10px;
+      color: #00857E; }
     .appetizer.total-appetizer hr {
       width: 80%;
-      border-width: 1px 0 0 0; }
+      border-color: #2d2d2d;
+      margin: 0.7em; }
+    .appetizer.total-appetizer p {
+      line-height: 1.8em;
+      max-width: 80%; }
     .appetizer.total-appetizer a {
       align-self: center; }
 
@@ -170,24 +174,6 @@ body {
   text-align: center;
   color: #4A4A4A;
   font-size: 14px; }
-
-.appetizer.total-appetizer h1 {
-  font-size: 1.5em; }
-
-.appetizer.total-appetizer .total {
-  font-size: 5.5em;
-  letter-spacing: -10px; }
-
-.appetizer.total-appetizer hr {
-  width: 80%;
-  border-width: 1px 0 0 0; }
-
-.appetizer.total-appetizer p {
-  line-height: 1.8em;
-  max-width: 80%; }
-
-.appetizer.total-appetizer a {
-  align-self: center; }
 
 .budget-construction .bricks {
   height: 30em;
@@ -315,12 +301,13 @@ body {
     display: flex;
     flex-direction: column; }
   .home .appetizers {
-    background: url(../images/map-optimised.jpg), transparent;
+    background: url(../images/map-optimised.jpg), #BEBC05;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 9em;
-    min-height: 2470px; }
+    min-height: 2470px;
+    position: relative; }
 
 .finance-element-pie .arc:nth-child(1) path {
   fill: cornflowerblue; }
@@ -527,6 +514,8 @@ body {
     text-align: justify;
     line-height: 1.4em;
     font-size: 1.1em; }
+    .top-infos > :nth-child(2) a {
+      width: 14em; }
   .top-infos .people-fraction {
     background-image: url(../images/bonhomme.svg);
     background-size: contain;
