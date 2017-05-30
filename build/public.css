@@ -175,91 +175,97 @@ body {
   color: #4A4A4A;
   font-size: 14px; }
 
-.budget-construction .bricks {
-  height: 30em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .budget-construction .bricks .column {
+.budget-construction {
+  position: relative; }
+  .budget-construction .bricks {
+    height: 30em;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 18%; }
-    .budget-construction .bricks .column .total {
-      font-weight: bold;
-      font-size: 0.7em; }
-      .budget-construction .bricks .column .total .number {
-        font-size: 3em; }
-    .budget-construction .bricks .column .parent {
-      opacity: 1;
-      background-color: transparent;
-      color: transparent;
-      position: relative;
-      padding: 0;
-      text-align: center;
-      font-weight: bold;
+    flex-direction: row;
+    justify-content: space-between; }
+    .budget-construction .bricks .column {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      width: 100%; }
-      .budget-construction .bricks .column .parent .brick {
-        background-color: indianred;
-        color: black;
-        padding: 0.5em;
-        margin: 0;
-        width: 100%;
-        border-radius: 5px;
-        position: relative; }
-        .budget-construction .bricks .column .parent .brick.appear-by-opacity {
-          opacity: 0; }
-        .budget-construction .bricks .column .parent .brick.appear-by-height {
-          height: 0;
-          padding: 0;
-          overflow: hidden; }
-      .budget-construction .bricks .column .parent .legend, .budget-construction .bricks .column .parent .brick .legend {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0; }
-      .budget-construction .bricks .column .parent .filling-container {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        height: 0;
-        color: transparent; }
-        .budget-construction .bricks .column .parent .filling-container .filling {
+      align-items: center;
+      width: 18%; }
+      .budget-construction .bricks .column .total {
+        font-weight: bold;
+        font-size: 0.7em; }
+        .budget-construction .bricks .column .total .number {
+          font-size: 3em; }
+      .budget-construction .bricks .column .parent {
+        opacity: 1;
+        background-color: transparent;
+        color: transparent;
+        position: relative;
+        padding: 0;
+        text-align: center;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%; }
+        .budget-construction .bricks .column .parent .brick {
+          background-color: indianred;
+          color: black;
+          padding: 0.5em;
+          margin: 0;
+          width: 100%;
+          border-radius: 5px;
+          position: relative; }
+          .budget-construction .bricks .column .parent .brick.appear-by-opacity {
+            opacity: 0; }
+          .budget-construction .bricks .column .parent .brick.appear-by-height {
+            height: 0;
+            padding: 0;
+            overflow: hidden; }
+        .budget-construction .bricks .column .parent .legend, .budget-construction .bricks .column .parent .brick .legend {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0; }
+        .budget-construction .bricks .column .parent .filling-container {
           position: absolute;
           bottom: 0;
           right: 0;
           left: 0;
           height: 0;
-          transition-property: height;
-          opacity: 0.2;
-          background-color: black; }
-
-.budget-construction hr {
-  height: 1em;
-  border: 0;
-  border-radius: 5px;
-  background-color: #D8D8D8; }
-
-.budget-construction dl {
-  height: 10em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .budget-construction dl .column {
-    width: 30%;
-    height: 100%;
+          color: transparent; }
+          .budget-construction .bricks .column .parent .filling-container .filling {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 0;
+            transition-property: height;
+            opacity: 0.2;
+            background-color: black; }
+  .budget-construction hr {
+    height: 1em;
+    border: 0;
+    border-radius: 5px;
+    background-color: #D8D8D8; }
+  .budget-construction dl {
+    height: 10em;
     display: flex;
-    flex-direction: column; }
-  .budget-construction dl dt {
-    font-weight: bold; }
-  .budget-construction dl dd {
-    margin: 0;
-    margin-bottom: 1em; }
+    flex-direction: row;
+    justify-content: space-between; }
+    .budget-construction dl .column {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-direction: column; }
+    .budget-construction dl dt {
+      font-weight: bold; }
+    .budget-construction dl dd {
+      margin: 0;
+      margin-bottom: 1em; }
+  .budget-construction .replay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition-property: opacity; }
 
 /*
     ANIMATION
@@ -387,51 +393,150 @@ body {
     height: 100%;
     width: 0; }
 
-.total-budget .viz {
+.sunburst .slice path {
+  fill: #d4c685; }
+
+.sunburst .slice > .piece path {
+  stroke: #AAA; }
+
+.sunburst .slice > .slice path {
+  fill: #f7ef81; }
+
+.sunburst .slice > .slice > .slice path {
+  fill: #cfe795; }
+
+.sunburst .slice > .slice > .slice > .slice path {
+  fill: #a7d3a6; }
+
+.sunburst .slice > .slice > .slice > .slice > .slice path {
+  fill: #add2c2; }
+
+.sunburst text {
+  color: black;
+  stroke-width: 0; }
+
+.sunburst .active-selection .slice > .piece path,
+.sunburst .active-selection .slice > .piece text {
+  opacity: 0.3; }
+
+.sunburst .active-selection .slice.highlighted > .piece path,
+.sunburst .active-selection .slice.highlighted > .piece text {
+  opacity: 1; }
+
+.sunburst .active-selection .slice.selected > .piece path {
+  stroke: indianred;
+  stroke-width: 2px; }
+
+.explore-budget section {
+  margin-bottom: 3em; }
+
+.explore-budget .viz {
   display: flex;
   flex-direction: row;
   justify-content: space-around; }
-  .total-budget .viz > * {
+  .explore-budget .viz > * {
     width: 30%; }
-  .total-budget .viz h1 {
+  .explore-budget .viz h1 {
     font-size: 2em;
     text-align: center; }
-  .total-budget .viz a {
+  .explore-budget .viz a {
     color: black;
     text-decoration: none; }
-    .total-budget .viz a .rf, .total-budget .viz a .ri, .total-budget .viz a .df, .total-budget .viz a .di {
+    .explore-budget .viz a .rf, .explore-budget .viz a .ri, .explore-budget .viz a .df, .explore-budget .viz a .di {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
 
-.total-budget section {
-  margin-bottom: 3em; }
-
-.total-budget .expenditures,
-.total-budget .revenue {
+.explore-budget .expenditures, .explore-budget .revenue {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 60vh; }
+  .explore-budget .expenditures a, .explore-budget .revenue a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
 
-.total-budget .expenditures a,
-.total-budget .revenue a {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; }
-
-.total-budget .rf {
+.explore-budget .rf {
   background-color: #68B0CD; }
 
-.total-budget .ri {
+.explore-budget .ri {
   background-color: #b5d8e6; }
 
-.total-budget .df {
+.explore-budget .df {
   background-color: #F35D32; }
 
-.total-budget .di {
+.explore-budget .di {
   background-color: #f9a992; }
+
+.explore-budget .m52-by-fonction {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .explore-budget .m52-by-fonction > :first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 2; }
+  .explore-budget .m52-by-fonction > * {
+    flex: 1; }
+  .explore-budget .m52-by-fonction .M52-DF-R0 path,
+  .explore-budget .m52-by-fonction .M52-DI-R0 path {
+    fill: #c27070; }
+  .explore-budget .m52-by-fonction .M52-DF-R1 path,
+  .explore-budget .m52-by-fonction .M52-DI-R1 path {
+    fill: #c2a170; }
+  .explore-budget .m52-by-fonction .M52-DF-R2 path,
+  .explore-budget .m52-by-fonction .M52-DI-R2 path {
+    fill: #b1c270; }
+  .explore-budget .m52-by-fonction .M52-DF-R3 path,
+  .explore-budget .m52-by-fonction .M52-DI-R3 path {
+    fill: #81c270; }
+  .explore-budget .m52-by-fonction .M52-DF-R4 path,
+  .explore-budget .m52-by-fonction .M52-DI-R4 path {
+    fill: #70c291; }
+  .explore-budget .m52-by-fonction .M52-DF-R5 path,
+  .explore-budget .m52-by-fonction .M52-DI-R5 path {
+    fill: #70c2c2; }
+  .explore-budget .m52-by-fonction .M52-DF-R6 path,
+  .explore-budget .m52-by-fonction .M52-DI-R6 path {
+    fill: #7091c2; }
+  .explore-budget .m52-by-fonction .M52-DF-R7 path,
+  .explore-budget .m52-by-fonction .M52-DI-R7 path {
+    fill: #8170c2; }
+  .explore-budget .m52-by-fonction .M52-DF-R8 path,
+  .explore-budget .m52-by-fonction .M52-DI-R8 path {
+    fill: #b170c2; }
+  .explore-budget .m52-by-fonction .M52-DF-R9 path,
+  .explore-budget .m52-by-fonction .M52-DI-R9 path {
+    fill: #c270a1; }
+  .explore-budget .m52-by-fonction .legend .color {
+    display: inline-block;
+    height: 2em;
+    width: 2em; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R0, .explore-budget .m52-by-fonction .legend .color.M52-DI-R0 {
+      background-color: #c27070; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R1, .explore-budget .m52-by-fonction .legend .color.M52-DI-R1 {
+      background-color: #c2a170; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R2, .explore-budget .m52-by-fonction .legend .color.M52-DI-R2 {
+      background-color: #b1c270; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R3, .explore-budget .m52-by-fonction .legend .color.M52-DI-R3 {
+      background-color: #81c270; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R4, .explore-budget .m52-by-fonction .legend .color.M52-DI-R4 {
+      background-color: #70c291; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R5, .explore-budget .m52-by-fonction .legend .color.M52-DI-R5 {
+      background-color: #70c2c2; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R6, .explore-budget .m52-by-fonction .legend .color.M52-DI-R6 {
+      background-color: #7091c2; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R7, .explore-budget .m52-by-fonction .legend .color.M52-DI-R7 {
+      background-color: #8170c2; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R8, .explore-budget .m52-by-fonction .legend .color.M52-DI-R8 {
+      background-color: #b170c2; }
+    .explore-budget .m52-by-fonction .legend .color.M52-DF-R9, .explore-budget .m52-by-fonction .legend .color.M52-DI-R9 {
+      background-color: #c270a1; }
 
 .d3-axis line {
   stroke: grey;
