@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
   http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
@@ -78,6 +77,56 @@ body {
   justify-content: center;
   align-items: center;
   color: grey; }
+
+.area-color-1 {
+  background-color: #EC3500; }
+  .area-color-1 rect {
+    fill: #EC3500; }
+
+.area-color-2 {
+  background-color: #F8C738; }
+  .area-color-2 rect {
+    fill: #F8C738; }
+
+.area-color-3 {
+  background-color: #0E7FAB; }
+  .area-color-3 rect {
+    fill: #0E7FAB; }
+
+.area-color-4 {
+  background-color: #B8C30F; }
+  .area-color-4 rect {
+    fill: #B8C30F; }
+
+.area-color-5 {
+  background-color: #9C26B0; }
+  .area-color-5 rect {
+    fill: #9C26B0; }
+
+.area-color-6 {
+  background-color: #019587; }
+  .area-color-6 rect {
+    fill: #019587; }
+
+.area-color-7 {
+  background-color: #795549; }
+  .area-color-7 rect {
+    fill: #795549; }
+
+.area-color-8 {
+  background-color: #607C8A; }
+  .area-color-8 rect {
+    fill: #607C8A; }
+
+.area-color-9 {
+  background-color: #6739B6; }
+  .area-color-9 rect {
+    fill: #6739B6; }
+
+.area-color-10 {
+  background-color: #FF5521; }
+  .area-color-10 rect {
+    fill: #FF5521; }
 
 .appetizer {
   max-width: 50%;
@@ -178,7 +227,7 @@ body {
 .budget-construction {
   position: relative; }
   .budget-construction .bricks {
-    height: 30em;
+    height: 40em;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
@@ -188,42 +237,69 @@ body {
       justify-content: flex-end;
       align-items: center;
       width: 18%; }
-      .budget-construction .bricks .column .total {
-        font-weight: bold;
-        font-size: 0.7em; }
-        .budget-construction .bricks .column .total .number {
-          font-size: 3em; }
+      .budget-construction .bricks .column .legend {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: row;
+        color: black;
+        font-weight: bold; }
+        .budget-construction .bricks .column .legend .number {
+          font-size: 5em; }
+        .budget-construction .bricks .column .legend .text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 0.3em;
+          text-transform: uppercase; }
+          .budget-construction .bricks .column .legend .text .unit {
+            text-transform: lowercase; }
+      .budget-construction .bricks .column .rf .brick {
+        background-color: #EC3500; }
+      .budget-construction .bricks .column .df .brick {
+        background-color: #F8C738; }
+      .budget-construction .bricks .column .ri .brick {
+        background-color: #0E7FAB; }
+      .budget-construction .bricks .column .di .brick {
+        background-color: #B8C30F; }
+      .budget-construction .bricks .column .brick.epargne {
+        background-color: gold; }
       .budget-construction .bricks .column .parent {
         opacity: 1;
         background-color: transparent;
         color: transparent;
         position: relative;
         padding: 0;
-        text-align: center;
+        text-align: left;
         font-weight: bold;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         width: 100%; }
         .budget-construction .bricks .column .parent .brick {
-          background-color: indianred;
-          color: black;
+          color: white;
           padding: 0.5em;
           margin: 0;
+          margin-top: 0.5em;
           width: 100%;
           border-radius: 5px;
           position: relative; }
-          .budget-construction .bricks .column .parent .brick.appear-by-opacity {
-            opacity: 0; }
+          .budget-construction .bricks .column .parent .brick .legend {
+            margin-top: 0.5em;
+            display: flex;
+            flex-direction: column;
+            color: white; }
+            .budget-construction .bricks .column .parent .brick .legend .text, .budget-construction .bricks .column .parent .brick .legend .amount {
+              padding: 0;
+              margin: 0; }
+            .budget-construction .bricks .column .parent .brick .legend .text {
+              text-transform: uppercase; }
+            .budget-construction .bricks .column .parent .brick .legend .amount {
+              font-weight: normal; }
           .budget-construction .bricks .column .parent .brick.appear-by-height {
+            transition-property: height;
+            padding: 0 0.5em;
             height: 0;
-            padding: 0;
             overflow: hidden; }
-        .budget-construction .bricks .column .parent .legend, .budget-construction .bricks .column .parent .brick .legend {
-          position: absolute;
-          top: 0;
-          right: 0;
-          left: 0; }
         .budget-construction .bricks .column .parent .filling-container {
           position: absolute;
           bottom: 0;
@@ -265,41 +341,16 @@ body {
     top: 0;
     right: 0;
     opacity: 0;
+    font-size: 1.2em;
+    padding: 1em;
+    color: white;
+    background-color: #D2D2D2;
+    text-transform: uppercase;
     transition-property: opacity; }
-
-/*
-    ANIMATION
-*/
-@keyframes brick-appear {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-@keyframes englobed-by-parent {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-
-@keyframes parent-englobes {
-  from {
-    background-color: transparent;
-    color: transparent; }
-  to {
-    background-color: lightskyblue;
-    color: black; } }
 
 .budget-construction .bricks .brick {
   animation-fill-mode: forwards; }
 
-/*
-    Questions animations : 
-    * à quels identifiants de l'agrégé correspondent les briques ?
-    * l'espacement entre les briques ne correspond à rien. Si on respecte les proportions le total est 
-    visuellement plus petit que la somme des parties
-
-*/
 .home {
   display: flex;
   flex-direction: column; }
@@ -348,12 +399,19 @@ body {
 .finance-element .atemporal p {
   margin-top: 0; }
 
-.finance-element .over-time .content rect {
-  fill: cornflowerblue; }
-
 .finance-element .over-time .content text {
   font-size: 1.2em;
   font-weight: bold; }
+
+.finance-element .legend ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.finance-element .legend .color {
+  display: inline-block;
+  height: 2em;
+  width: 2em; }
 
 .finance-element .partition a {
   display: flex;
@@ -427,6 +485,56 @@ body {
   stroke: indianred;
   stroke-width: 2px; }
 
+.area-color-1 {
+  background-color: #EC3500; }
+  .area-color-1 rect {
+    fill: #EC3500; }
+
+.area-color-2 {
+  background-color: #F8C738; }
+  .area-color-2 rect {
+    fill: #F8C738; }
+
+.area-color-3 {
+  background-color: #0E7FAB; }
+  .area-color-3 rect {
+    fill: #0E7FAB; }
+
+.area-color-4 {
+  background-color: #B8C30F; }
+  .area-color-4 rect {
+    fill: #B8C30F; }
+
+.area-color-5 {
+  background-color: #9C26B0; }
+  .area-color-5 rect {
+    fill: #9C26B0; }
+
+.area-color-6 {
+  background-color: #019587; }
+  .area-color-6 rect {
+    fill: #019587; }
+
+.area-color-7 {
+  background-color: #795549; }
+  .area-color-7 rect {
+    fill: #795549; }
+
+.area-color-8 {
+  background-color: #607C8A; }
+  .area-color-8 rect {
+    fill: #607C8A; }
+
+.area-color-9 {
+  background-color: #6739B6; }
+  .area-color-9 rect {
+    fill: #6739B6; }
+
+.area-color-10 {
+  background-color: #FF5521; }
+  .area-color-10 rect {
+    fill: #FF5521; }
+
 .explore-budget section {
   margin-bottom: 3em; }
 
@@ -435,40 +543,52 @@ body {
   flex-direction: row;
   justify-content: space-around; }
   .explore-budget .viz > * {
-    width: 30%; }
+    width: 45%; }
   .explore-budget .viz h1 {
     font-size: 2em;
-    text-align: center; }
-  .explore-budget .viz a {
-    color: black;
+    text-align: left;
+    text-transform: uppercase; }
+  .explore-budget .viz > a {
     text-decoration: none; }
-    .explore-budget .viz a .rf, .explore-budget .viz a .ri, .explore-budget .viz a .df, .explore-budget .viz a .di {
+    .explore-budget .viz > a .rf, .explore-budget .viz > a .ri, .explore-budget .viz > a .df, .explore-budget .viz > a .di {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center; }
 
-.explore-budget .expenditures, .explore-budget .revenue {
+.explore-budget .expenditures > a, .explore-budget .revenue > a {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  min-height: 60vh; }
-  .explore-budget .expenditures a, .explore-budget .revenue a {
+  align-items: flex-end;
+  color: black; }
+  .explore-budget .expenditures > a .areas, .explore-budget .revenue > a .areas {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; }
+    .explore-budget .expenditures > a .areas > *, .explore-budget .revenue > a .areas > * {
+      margin-top: 0.5em; }
+  .explore-budget .expenditures > a .texts, .explore-budget .revenue > a .texts {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; }
+    padding: 0 1em; }
+    .explore-budget .expenditures > a .texts .amount, .explore-budget .expenditures > a .texts .unit, .explore-budget .revenue > a .texts .amount, .explore-budget .revenue > a .texts .unit {
+      font-weight: bold; }
+    .explore-budget .expenditures > a .texts .amount, .explore-budget .revenue > a .texts .amount {
+      font-size: 5em; }
 
 .explore-budget .rf {
-  background-color: #68B0CD; }
+  background-color: #0E7FAB; }
 
 .explore-budget .ri {
-  background-color: #b5d8e6; }
+  background-color: #31b9ee; }
 
 .explore-budget .df {
-  background-color: #F35D32; }
+  background-color: #EC3500; }
 
 .explore-budget .di {
-  background-color: #f9a992; }
+  background-color: #ff7a53; }
 
 .explore-budget .m52-by-fonction {
   display: flex;
