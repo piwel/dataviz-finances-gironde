@@ -466,6 +466,8 @@ body {
     clear: both; }
   .finance-element .atemporal p {
     margin-top: 0; }
+  .finance-element .temporal {
+    margin-top: 2em; }
   .finance-element .over-time .content text {
     font-size: 1.2em;
     font-weight: bold; }
