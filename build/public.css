@@ -470,7 +470,10 @@ body {
     margin-top: 2em; }
   .finance-element .over-time .content text {
     font-size: 1.2em;
-    font-weight: bold; }
+    font-weight: bold;
+    paint-order: stroke;
+    stroke: #fff;
+    stroke-width: 2px; }
   .finance-element .legend ol {
     list-style: none;
     margin: 0;
