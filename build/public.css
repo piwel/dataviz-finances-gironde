@@ -283,40 +283,40 @@ body {
     height: 40em;
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
-    .budget-construction .bricks .column {
+    justify-content: space-around; }
+    .budget-construction .bricks .brick-column {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
       width: 18%; }
-      .budget-construction .bricks .column .legend {
+      .budget-construction .bricks .brick-column .legend {
         align-self: flex-start;
         display: flex;
         flex-direction: row;
         color: black;
         font-weight: bold; }
-        .budget-construction .bricks .column .legend .number {
+        .budget-construction .bricks .brick-column .legend .number {
           font-size: 5em; }
-        .budget-construction .bricks .column .legend .text {
+        .budget-construction .bricks .brick-column .legend .text {
           display: flex;
           flex-direction: column;
           justify-content: center;
           padding-left: 0.3em;
           text-transform: uppercase; }
-          .budget-construction .bricks .column .legend .text .unit {
+          .budget-construction .bricks .brick-column .legend .text .unit {
             text-transform: lowercase; }
-      .budget-construction .bricks .column .rf .brick {
-        background-color: #0E7FAB; }
-      .budget-construction .bricks .column .df .brick {
-        background-color: #F8C738; }
-      .budget-construction .bricks .column .ri .brick {
+      .budget-construction .bricks .brick-column .rf .brick {
         background-color: #EC3500; }
-      .budget-construction .bricks .column .di .brick {
+      .budget-construction .bricks .brick-column .df .brick {
+        background-color: #F8C738; }
+      .budget-construction .bricks .brick-column .ri .brick {
+        background-color: #0E7FAB; }
+      .budget-construction .bricks .brick-column .di .brick {
         background-color: #B8C30F; }
-      .budget-construction .bricks .column .brick.epargne {
-        background-color: gold; }
-      .budget-construction .bricks .column .parent {
+      .budget-construction .bricks .brick-column .brick.epargne {
+        background-color: #9C26B0; }
+      .budget-construction .bricks .brick-column .parent {
         opacity: 1;
         background-color: transparent;
         color: transparent;
@@ -328,62 +328,60 @@ body {
         flex-direction: column;
         justify-content: flex-end;
         width: 100%; }
-        .budget-construction .bricks .column .parent .brick {
+        .budget-construction .bricks .brick-column .parent .brick {
           color: white;
           padding: 0.5em;
           margin: 0;
-          margin-top: 0.5em;
           width: 100%;
           border-radius: 5px;
           position: relative; }
-          .budget-construction .bricks .column .parent .brick .legend {
+          .budget-construction .bricks .brick-column .parent .brick:not(:first-child) {
+            margin-top: 0.5em; }
+          .budget-construction .bricks .brick-column .parent .brick .legend {
             margin-top: 0.5em;
             display: flex;
             flex-direction: column;
             color: white; }
-            .budget-construction .bricks .column .parent .brick .legend .text, .budget-construction .bricks .column .parent .brick .legend .amount {
+            .budget-construction .bricks .brick-column .parent .brick .legend .text, .budget-construction .bricks .brick-column .parent .brick .legend .amount {
               padding: 0;
               margin: 0; }
-            .budget-construction .bricks .column .parent .brick .legend .text {
+            .budget-construction .bricks .brick-column .parent .brick .legend .text {
               text-transform: uppercase; }
-            .budget-construction .bricks .column .parent .brick .legend .amount {
+            .budget-construction .bricks .brick-column .parent .brick .legend .amount {
               font-weight: normal; }
-          .budget-construction .bricks .column .parent .brick.appear-by-height {
+          .budget-construction .bricks .brick-column .parent .brick.appear-by-height {
             transition-property: height;
             padding: 0 0.5em;
             height: 0;
             overflow: hidden; }
-        .budget-construction .bricks .column .parent .filling-container {
+        .budget-construction .bricks .brick-column .parent .emptier {
           position: absolute;
-          bottom: 0;
+          top: 0;
           right: 0;
           left: 0;
           height: 0;
-          color: transparent; }
-          .budget-construction .bricks .column .parent .filling-container .filling {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            height: 0;
-            transition-property: height;
-            opacity: 0.2;
-            background-color: black; }
+          z-index: 1;
+          background-color: white;
+          opacity: 0.6; }
   .budget-construction hr {
     height: 1em;
     border: 0;
     border-radius: 5px;
     background-color: #D8D8D8; }
   .budget-construction dl {
-    height: 10em;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
     .budget-construction dl .column {
       width: 30%;
       height: 100%;
+      color: black;
+      text-decoration: none;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: 0.2s; }
     .budget-construction dl dt {
       font-weight: bold; }
     .budget-construction dl dd {
@@ -627,6 +625,14 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
+    .explore-budget .viz .rf {
+      background-color: #EC3500; }
+    .explore-budget .viz .ri {
+      background-color: #ff7a53; }
+    .explore-budget .viz .df {
+      background-color: #0E7FAB; }
+    .explore-budget .viz .di {
+      background-color: #31b9ee; }
   .explore-budget .expenditures > a, .explore-budget .revenue > a {
     display: flex;
     flex-direction: row;
@@ -648,14 +654,6 @@ body {
         font-weight: bold; }
       .explore-budget .expenditures > a .texts .amount, .explore-budget .revenue > a .texts .amount {
         font-size: 5em; }
-  .explore-budget .rf {
-    background-color: #EC3500; }
-  .explore-budget .ri {
-    background-color: #ff7a53; }
-  .explore-budget .df {
-    background-color: #0E7FAB; }
-  .explore-budget .di {
-    background-color: #31b9ee; }
   .explore-budget .m52-by-fonction {
     display: flex;
     flex-direction: row;
