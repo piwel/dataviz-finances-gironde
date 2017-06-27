@@ -169,13 +169,27 @@ body {
     background-color: #EDEDED;
     box-shadow: 0 0 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #4A4A4A; }
     .appetizer.total-appetizer h1 {
-      font-size: 1.5em; }
-    .appetizer.total-appetizer .total {
-      font-size: 5.5em;
-      letter-spacing: -10px;
-      color: #00857E; }
+      font-size: 1.5em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      align-self: auto;
+      width: 80%;
+      margin: 0; }
+      .appetizer.total-appetizer h1 .number {
+        font-size: 5.5em;
+        color: #00857E;
+        letter-spacing: -10px; }
+      .appetizer.total-appetizer h1 .text {
+        width: 50%;
+        text-align: center;
+        text-transform: uppercase; }
     .appetizer.total-appetizer hr {
       width: 80%;
       border-color: #2d2d2d;
@@ -289,22 +303,22 @@ body {
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
-      width: 18%; }
-      .budget-construction .bricks .brick-column .legend {
+      width: 19%; }
+      .budget-construction .bricks .brick-column > .legend {
         align-self: flex-start;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         color: black;
         font-weight: bold; }
-        .budget-construction .bricks .brick-column .legend .number {
-          font-size: 5em; }
-        .budget-construction .bricks .brick-column .legend .text {
+        .budget-construction .bricks .brick-column > .legend .number {
+          color: #BBB; }
+        .budget-construction .bricks .brick-column > .legend .text {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          padding-left: 0.3em;
+          font-size: 1.5em;
           text-transform: uppercase; }
-          .budget-construction .bricks .brick-column .legend .text .unit {
+          .budget-construction .bricks .brick-column > .legend .text .unit {
             text-transform: lowercase; }
       .budget-construction .bricks .brick-column .rf .brick {
         background-color: #EC3500; }
@@ -315,7 +329,7 @@ body {
       .budget-construction .bricks .brick-column .di .brick {
         background-color: #B8C30F; }
       .budget-construction .bricks .brick-column .brick.epargne {
-        background-color: #9C26B0; }
+        background-color: #EC3500; }
       .budget-construction .bricks .brick-column .parent {
         opacity: 1;
         background-color: transparent;
@@ -398,6 +412,8 @@ body {
     background-color: #D2D2D2;
     text-transform: uppercase;
     transition-property: opacity; }
+    .budget-construction .replay::disabled {
+      cursor: default; }
 
 .budget-construction .bricks .brick {
   animation-fill-mode: forwards; }
