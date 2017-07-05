@@ -132,8 +132,8 @@ body {
     fill: #FF5521; }
 
 .appetizer {
-  max-width: 50%;
-  padding: 1em;
+  width: 58.3%;
+  padding: 2em;
   margin: 10em 0;
   background-color: white;
   box-shadow: 0 0 2px black;
@@ -186,6 +186,8 @@ body {
         font-size: 5.5em;
         color: #00857E;
         letter-spacing: -10px; }
+        .appetizer.total-appetizer h1 .number .after-comma {
+          font-size: 0.6em; }
       .appetizer.total-appetizer h1 .text {
         width: 50%;
         text-align: center;
@@ -203,43 +205,24 @@ body {
 .appetizer .info {
   display: flex;
   flex-direction: row; }
-
-.appetizer .info .number {
-  padding-right: 1em;
-  border-right: 0.5em solid #D7D7D7; }
-
-.appetizer .info .number .main,
-.appetizer .info .number .secundary {
-  white-space: nowrap; }
-
-.appetizer .info .number .main {
-  font-size: 2em; }
-
-.appetizer .info .number .secundary {
-  font-size: 1.5em; }
-
-.appetizer .info p {
-  padding-left: 1em; }
+  .appetizer .info .number {
+    padding-right: 1em;
+    border-right: 0.5em solid #D7D7D7;
+    text-align: right; }
+    .appetizer .info .number .main, .appetizer .info .number .secundary {
+      white-space: nowrap;
+      font-weight: bold; }
+    .appetizer .info .number .main {
+      font-size: 3em;
+      color: #00857E; }
+    .appetizer .info .number .secundary {
+      font-size: 1.5em;
+      text-transform: uppercase; }
+  .appetizer .info p {
+    padding-left: 1em; }
 
 .appetizer a {
   align-self: flex-end; }
-
-.appetizer.total-appetizer {
-  border: 1.5em solid white;
-  margin: 0;
-  width: 38em;
-  height: 38em;
-  border-radius: 50%;
-  position: relative;
-  left: 10%;
-  /* % relative to parent width */
-  transform: translateY(-25%);
-  /* % relative to element height */
-  background-color: #EDEDED;
-  box-shadow: 0 0 0;
-  text-align: center;
-  color: #4A4A4A;
-  font-size: 14px; }
 
 .area-color-1 {
   background-color: #0E7FAB; }
@@ -884,7 +867,7 @@ body {
     font-weight: bold; }
     .top-infos .people-fraction > * {
       position: absolute;
-      left: 50%;
+      left: calc(50% + 1em);
       width: 50%;
       transform: translateY(50%); }
     .top-infos .people-fraction .number {
