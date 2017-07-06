@@ -430,6 +430,17 @@ body {
       display: flex;
       flex-direction: column; }
 
+ol.legend-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em; }
+  ol.legend-list .color {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    vertical-align: middle; }
+
 .finance-element-pie .arc:nth-child(1) path {
   fill: cornflowerblue; }
 
@@ -461,6 +472,8 @@ body {
         white-space: nowrap; }
   .finance-element h2 {
     clear: both; }
+  .finance-element .atemporal ul, .finance-element .temporal ul {
+    list-style: disc; }
   .finance-element .atemporal p {
     margin-top: 0; }
   .finance-element .temporal {
@@ -471,14 +484,12 @@ body {
     paint-order: stroke;
     stroke: #fff;
     stroke-width: 2px; }
-  .finance-element .legend ol {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-  .finance-element .legend .color {
-    display: inline-block;
-    height: 2em;
-    width: 2em; }
+  .finance-element .over-time .d3-axis .selected {
+    font-weight: bold; }
+    .finance-element .over-time .d3-axis .selected text {
+      fill: black; }
+  .finance-element .over-time .d3-axis .actionable {
+    cursor: pointer; }
   .finance-element .partition a {
     display: flex;
     flex-direction: row;
@@ -696,30 +707,26 @@ body {
     .explore-budget .m52-by-fonction .M52-DF-R9 path,
     .explore-budget .m52-by-fonction .M52-DI-R9 path {
       fill: #FF5521; }
-    .explore-budget .m52-by-fonction .legend .color {
-      display: inline-block;
-      height: 2em;
-      width: 2em; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R0, .explore-budget .m52-by-fonction .legend .color.M52-DI-R0 {
-        background-color: #0E7FAB; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R1, .explore-budget .m52-by-fonction .legend .color.M52-DI-R1 {
-        background-color: #F8C738; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R2, .explore-budget .m52-by-fonction .legend .color.M52-DI-R2 {
-        background-color: #EC3500; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R3, .explore-budget .m52-by-fonction .legend .color.M52-DI-R3 {
-        background-color: #B8C30F; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R4, .explore-budget .m52-by-fonction .legend .color.M52-DI-R4 {
-        background-color: #9C26B0; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R5, .explore-budget .m52-by-fonction .legend .color.M52-DI-R5 {
-        background-color: #019587; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R6, .explore-budget .m52-by-fonction .legend .color.M52-DI-R6 {
-        background-color: #795549; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R7, .explore-budget .m52-by-fonction .legend .color.M52-DI-R7 {
-        background-color: #607C8A; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R8, .explore-budget .m52-by-fonction .legend .color.M52-DI-R8 {
-        background-color: #6739B6; }
-      .explore-budget .m52-by-fonction .legend .color.M52-DF-R9, .explore-budget .m52-by-fonction .legend .color.M52-DI-R9 {
-        background-color: #FF5521; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R0, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R0 {
+      background-color: #0E7FAB; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R1, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R1 {
+      background-color: #F8C738; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R2, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R2 {
+      background-color: #EC3500; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R3, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R3 {
+      background-color: #B8C30F; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R4, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R4 {
+      background-color: #9C26B0; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R5, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R5 {
+      background-color: #019587; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R6, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R6 {
+      background-color: #795549; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R7, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R7 {
+      background-color: #607C8A; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R8, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R8 {
+      background-color: #6739B6; }
+    .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R9, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R9 {
+      background-color: #FF5521; }
 
 .d3-axis line {
   stroke: grey;
@@ -932,32 +939,35 @@ body {
   font-size: 1.6em;
   font-weight: bold; }
 
-.solidarity-by-year .legend {
-  font-size: 1.3em; }
-  .solidarity-by-year .legend .color {
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em; }
-  .solidarity-by-year .legend .DF-1-1 .color {
-    background-color: #68B0CD; }
-  .solidarity-by-year .legend .DF-1-2 .color {
-    background-color: #B8C30F; }
-  .solidarity-by-year .legend .DF-1-3 .color {
-    background-color: #F8C738; }
-  .solidarity-by-year .legend .DF-1-4 .color {
-    background-color: #F35D32; }
-  .solidarity-by-year .legend .DF-1-other .color {
-    background-color: #c564a9; }
-  .solidarity-by-year .legend .DF-2-1 .color {
-    background-color: #F35D32; }
-  .solidarity-by-year .legend .DF-2-2 .color {
-    background-color: #F8C738; }
-  .solidarity-by-year .legend .DF-2-3 .color {
-    background-color: #B8C30F; }
-  .solidarity-by-year .legend .DF-2-4 .color {
-    background-color: #68B0CD; }
-  .solidarity-by-year .legend .DF-2-other .color {
-    background-color: #c564a9; }
+.solidarity-by-year .legend-list .DF-1-1 .color {
+  background-color: #68B0CD; }
+
+.solidarity-by-year .legend-list .DF-1-2 .color {
+  background-color: #B8C30F; }
+
+.solidarity-by-year .legend-list .DF-1-3 .color {
+  background-color: #F8C738; }
+
+.solidarity-by-year .legend-list .DF-1-4 .color {
+  background-color: #F35D32; }
+
+.solidarity-by-year .legend-list .DF-1-other .color {
+  background-color: #c564a9; }
+
+.solidarity-by-year .legend-list .DF-2-1 .color {
+  background-color: #F35D32; }
+
+.solidarity-by-year .legend-list .DF-2-2 .color {
+  background-color: #F8C738; }
+
+.solidarity-by-year .legend-list .DF-2-3 .color {
+  background-color: #B8C30F; }
+
+.solidarity-by-year .legend-list .DF-2-4 .color {
+  background-color: #68B0CD; }
+
+.solidarity-by-year .legend-list .DF-2-other .color {
+  background-color: #c564a9; }
 
 .focus-detail.insertion .explanation .proportion {
   background-color: #EC3500; }
