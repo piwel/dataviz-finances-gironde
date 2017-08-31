@@ -61,7 +61,6 @@ body {
 .cd33-finance-dataviz {
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  padding-bottom: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -414,7 +413,7 @@ body {
     display: flex;
     flex-direction: column; }
   .home .appetizers-container {
-    background: url(../images/map-optimised.jpg), #BEBC05;
+    background: url("/sites/default/files/2017-07/map-optimised.jpg"), #BEBC05;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -440,6 +439,33 @@ ol.legend-list {
     height: 1em;
     width: 1em;
     vertical-align: middle; }
+
+.d3-axis line {
+  stroke: #DDD;
+  stroke-width: 1px; }
+
+.d3-axis text {
+  fill: grey; }
+
+.stackchart .content text.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 2px; }
+  .stackchart .content text.title tspan:nth-child(2) {
+    font-weight: 100; }
+
+.stackchart .content .brick text {
+  fill: white; }
+
+.stackchart .d3-axis .selected {
+  font-weight: bold; }
+  .stackchart .d3-axis .selected text {
+    fill: black; }
+
+.stackchart .d3-axis .actionable {
+  cursor: pointer; }
 
 .finance-element-pie .arc:nth-child(1) path {
   fill: cornflowerblue; }
@@ -478,18 +504,6 @@ ol.legend-list {
     margin-top: 0; }
   .finance-element .temporal {
     margin-top: 2em; }
-  .finance-element .over-time .content text {
-    font-size: 1.2em;
-    font-weight: bold;
-    paint-order: stroke;
-    stroke: #fff;
-    stroke-width: 2px; }
-  .finance-element .over-time .d3-axis .selected {
-    font-weight: bold; }
-    .finance-element .over-time .d3-axis .selected text {
-      fill: black; }
-  .finance-element .over-time .d3-axis .actionable {
-    cursor: pointer; }
   .finance-element .partition a {
     display: flex;
     flex-direction: row;
@@ -729,11 +743,31 @@ ol.legend-list {
       background-color: #FF5521; }
 
 .d3-axis line {
-  stroke: grey;
+  stroke: #DDD;
   stroke-width: 1px; }
 
 .d3-axis text {
   fill: grey; }
+
+.stackchart .content text.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 2px; }
+  .stackchart .content text.title tspan:nth-child(2) {
+    font-weight: 100; }
+
+.stackchart .content .brick text {
+  fill: white; }
+
+.stackchart .d3-axis .selected {
+  font-weight: bold; }
+  .stackchart .d3-axis .selected text {
+    fill: black; }
+
+.stackchart .d3-axis .actionable {
+  cursor: pointer; }
 
 .area-color-1 {
   background-color: #0E7FAB; }
@@ -881,92 +915,64 @@ ol.legend-list {
       font-size: 4em;
       color: #F62727; }
 
-.solidarity-by-year svg .d3-axis.x .tick line {
-  stroke: grey;
-  stroke-width: 1px; }
-
-.solidarity-by-year svg .d3-axis.x .tick text {
-  fill: grey; }
-
-.solidarity-by-year svg .d3-axis.y .tick line {
-  stroke: #AAA;
-  stroke-width: 1px; }
-
-.solidarity-by-year svg .d3-axis.y .tick text {
-  fill: #AAA; }
-
-.solidarity-by-year svg .content .column rect {
-  fill: transparent;
-  stroke: grey;
-  stroke-width: 0; }
-
-.solidarity-by-year svg .content .column .DF-2-1 rect {
-  fill: #F35D32; }
-
-.solidarity-by-year svg .content .column .DF-2-2 rect {
-  fill: #F8C738; }
-
-.solidarity-by-year svg .content .column .DF-2-3 rect {
-  fill: #B8C30F; }
-
-.solidarity-by-year svg .content .column .DF-2-4 rect {
+.stackchart .content .DF-1-1 rect {
   fill: #68B0CD; }
 
-.solidarity-by-year svg .content .column .DF-2-other rect {
-  fill: #c564a9; }
-
-.solidarity-by-year svg .content .column .DF-1-1 rect {
-  fill: #68B0CD; }
-
-.solidarity-by-year svg .content .column .DF-1-2 rect {
+.stackchart .content .DF-1-2 rect {
   fill: #B8C30F; }
 
-.solidarity-by-year svg .content .column .DF-1-3 rect {
+.stackchart .content .DF-1-3 rect {
   fill: #F8C738; }
 
-.solidarity-by-year svg .content .column .DF-1-4 rect {
+.stackchart .content .DF-1-4 rect {
   fill: #F35D32; }
 
-.solidarity-by-year svg .content .column .DF-1-other rect {
+.stackchart .content .DF-1-other rect {
   fill: #c564a9; }
 
-.solidarity-by-year svg .content .column text {
-  fill: white;
-  font-weight: bold; }
+.stackchart .content .DF-2-1 rect {
+  fill: #F35D32; }
 
-.solidarity-by-year svg .content .column text.total {
-  fill: black;
-  font-size: 1.6em;
-  font-weight: bold; }
+.stackchart .content .DF-2-2 rect {
+  fill: #F8C738; }
 
-.solidarity-by-year .legend-list .DF-1-1 .color {
+.stackchart .content .DF-2-3 rect {
+  fill: #B8C30F; }
+
+.stackchart .content .DF-2-4 rect {
+  fill: #68B0CD; }
+
+.stackchart .content .DF-2-other rect {
+  fill: #c564a9; }
+
+.stackchart .legend-list .DF-1-1.color {
   background-color: #68B0CD; }
 
-.solidarity-by-year .legend-list .DF-1-2 .color {
+.stackchart .legend-list .DF-1-2.color {
   background-color: #B8C30F; }
 
-.solidarity-by-year .legend-list .DF-1-3 .color {
+.stackchart .legend-list .DF-1-3.color {
   background-color: #F8C738; }
 
-.solidarity-by-year .legend-list .DF-1-4 .color {
+.stackchart .legend-list .DF-1-4.color {
   background-color: #F35D32; }
 
-.solidarity-by-year .legend-list .DF-1-other .color {
+.stackchart .legend-list .DF-1-other.color {
   background-color: #c564a9; }
 
-.solidarity-by-year .legend-list .DF-2-1 .color {
+.stackchart .legend-list .DF-2-1.color {
   background-color: #F35D32; }
 
-.solidarity-by-year .legend-list .DF-2-2 .color {
+.stackchart .legend-list .DF-2-2.color {
   background-color: #F8C738; }
 
-.solidarity-by-year .legend-list .DF-2-3 .color {
+.stackchart .legend-list .DF-2-3.color {
   background-color: #B8C30F; }
 
-.solidarity-by-year .legend-list .DF-2-4 .color {
+.stackchart .legend-list .DF-2-4.color {
   background-color: #68B0CD; }
 
-.solidarity-by-year .legend-list .DF-2-other .color {
+.stackchart .legend-list .DF-2-other.color {
   background-color: #c564a9; }
 
 .focus-detail.insertion .explanation .proportion {
@@ -980,6 +986,33 @@ ol.legend-list {
 
 .focus-detail.childhood .explanation .proportion {
   background-color: #0E7FAB; }
+
+.d3-axis line {
+  stroke: #DDD;
+  stroke-width: 1px; }
+
+.d3-axis text {
+  fill: grey; }
+
+.stackchart .content text.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 2px; }
+  .stackchart .content text.title tspan:nth-child(2) {
+    font-weight: 100; }
+
+.stackchart .content .brick text {
+  fill: white; }
+
+.stackchart .d3-axis .selected {
+  font-weight: bold; }
+  .stackchart .d3-axis .selected text {
+    fill: black; }
+
+.stackchart .d3-axis .actionable {
+  cursor: pointer; }
 
 .area-color-1 {
   background-color: #0E7FAB; }
