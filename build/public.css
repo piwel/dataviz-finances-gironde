@@ -413,7 +413,7 @@ body {
     display: flex;
     flex-direction: column; }
   .home .appetizers-container {
-    background: url("/sites/default/files/2017-07/map-optimised.jpg"), #BEBC05;
+    background: url("../images/map-optimised.jpg"), #BEBC05;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
