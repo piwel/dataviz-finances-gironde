@@ -637,9 +637,13 @@ ol.legend-list {
     flex-direction: row;
     justify-content: space-around; }
     .explore-budget .viz > * {
-      width: 45%; }
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
     .explore-budget .viz h1 {
-      font-size: 2em;
+      font-size: 1.6em;
+      font-weight: bold;
       text-align: left;
       text-transform: uppercase; }
     .explore-budget .viz > a {
@@ -654,43 +658,78 @@ ol.legend-list {
     .explore-budget .viz .ri {
       background-color: #ff7a53; }
     .explore-budget .viz .df {
-      background-color: #0E7FAB; }
+      background-color: #F6A84E; }
     .explore-budget .viz .di {
-      background-color: #31b9ee; }
+      background-color: #F8C738; }
   .explore-budget .expenditures > a, .explore-budget .revenue > a {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    color: black; }
+    align-items: flex-end; }
     .explore-budget .expenditures > a .areas, .explore-budget .revenue > a .areas {
-      width: 50%;
+      width: 55%;
       height: 100%;
       display: flex;
       flex-direction: column; }
       .explore-budget .expenditures > a .areas > *, .explore-budget .revenue > a .areas > * {
-        margin-top: 0.5em; }
+        margin-top: 0.5em;
+        min-height: 4em;
+        border-radius: 0.5em; }
+      .explore-budget .expenditures > a .areas h2, .explore-budget .expenditures > a .areas h3, .explore-budget .revenue > a .areas h2, .explore-budget .revenue > a .areas h3 {
+        color: white;
+        margin-left: 0.5em;
+        padding: 0; }
+      .explore-budget .expenditures > a .areas h2, .explore-budget .revenue > a .areas h2 {
+        font-size: 1em;
+        margin-top: 0.5em;
+        text-transform: uppercase;
+        font-weight: bold; }
+      .explore-budget .expenditures > a .areas h3, .explore-budget .revenue > a .areas h3 {
+        font-size: 0.9em;
+        text-transform: none;
+        font-weight: normal; }
     .explore-budget .expenditures > a .texts, .explore-budget .revenue > a .texts {
+      height: 100%;
       display: flex;
       flex-direction: column;
-      padding: 0 1em; }
+      justify-content: space-between;
+      padding: 0 1em;
+      color: black; }
       .explore-budget .expenditures > a .texts .amount, .explore-budget .expenditures > a .texts .unit, .explore-budget .revenue > a .texts .amount, .explore-budget .revenue > a .texts .unit {
         font-weight: bold; }
       .explore-budget .expenditures > a .texts .amount, .explore-budget .revenue > a .texts .amount {
         font-size: 5em; }
+      .explore-budget .expenditures > a .texts .unit, .explore-budget .revenue > a .texts .unit {
+        transform: translateY(-1em); }
   .explore-budget .m52-by-fonction {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center; }
+    align-items: stretch; }
     .explore-budget .m52-by-fonction > :first-child {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       flex: 2; }
-    .explore-budget .m52-by-fonction > * {
+    .explore-budget .m52-by-fonction > :nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       flex: 1; }
+    .explore-budget .m52-by-fonction .display-choice {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .explore-budget .m52-by-fonction .display-choice .radio {
+        margin-left: 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; }
+        .explore-budget .m52-by-fonction .display-choice .radio button {
+          padding: 0.5em;
+          border: 1px solid #AAA; }
+          .explore-budget .m52-by-fonction .display-choice .radio button.selected {
+            background-color: #0E7FAB; }
     .explore-budget .m52-by-fonction .M52-DF-R0 path,
     .explore-budget .m52-by-fonction .M52-DI-R0 path {
       fill: #0E7FAB; }
