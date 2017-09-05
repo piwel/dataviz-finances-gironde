@@ -485,63 +485,57 @@ ol.legend-list {
   padding: 0 40px; }
   .finance-element > section {
     margin-bottom: 5em; }
-  .finance-element .ratios {
-    width: 30%;
-    float: left;
-    margin-right: 1em; }
-    .finance-element .ratios .proportion-container {
-      width: 100%;
-      height: 2em;
-      background-color: lightgrey;
-      color: white;
-      text-shadow: 0 0 2px black; }
-      .finance-element .ratios .proportion-container .proportion {
-        height: 100%;
-        background-color: darkslategrey;
-        white-space: nowrap; }
+  .finance-element .top-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .finance-element .top-infos svg {
+      flex: 1; }
+      .finance-element .top-infos svg circle, .finance-element .top-infos svg path {
+        stroke: white;
+        stroke-width: 3px; }
+    .finance-element .top-infos > :nth-child(2) {
+      flex: 2; }
   .finance-element h2 {
     clear: both; }
   .finance-element .atemporal ul, .finance-element .temporal ul {
-    list-style: disc; }
+    list-style: disc;
+    list-style-position: inside; }
   .finance-element .atemporal p {
     margin-top: 0; }
   .finance-element .temporal {
     margin-top: 2em; }
-  .finance-element .partition a {
+  .finance-element .partition > a {
     display: flex;
     flex-direction: row;
     color: black;
     text-decoration: none;
     min-height: 10em; }
-    .finance-element .partition a:hover {
-      background-color: lightgrey; }
-    .finance-element .partition a .part {
-      background-color: cadetblue;
+    .finance-element .partition > a .part {
+      background-color: #0E7FAB;
       color: white;
-      font-size: 1.2em;
       font-weight: bold;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
       align-items: flex-start;
-      padding: 0.2em;
-      width: 6em;
+      padding: 0.5em;
+      border: 2px solid white;
+      width: 12em;
+      min-height: 2.5em;
       z-index: 1; }
-    .finance-element .partition a .text {
+    .finance-element .partition > a .text {
       margin-left: 2em;
       overflow: hidden;
       text-overflow: ellipsis;
       padding-bottom: 1em;
       flex: 1; }
-      .finance-element .partition a .text h1 {
+      .finance-element .partition > a .text h1 {
         font-size: 2em; }
-      .finance-element .partition a .text a {
-        text-decoration: underline; }
-    .finance-element .partition a:not(:last-child)::before {
+    .finance-element .partition > a:not(:last-child)::before {
       content: '';
-      font-size: 1.2em;
-      transform: translateX(3em);
-      border-left: 1px solid black;
+      transform: translateX(6em);
+      border-left: 4px solid #D8D8D8;
       height: 100%;
       width: 0; }
 
@@ -939,108 +933,83 @@ ol.legend-list {
   padding: 0 40px; }
   .focus > section {
     margin-bottom: 5em; }
-
-.top-infos {
-  display: flex;
-  flex-direction: row; }
-  .top-infos > * {
-    flex: 1; }
-  .top-infos > :nth-child(2) {
+  .focus .top-infos {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: justify;
-    line-height: 1.4em;
-    font-size: 1.1em; }
-    .top-infos > :nth-child(2) a {
-      width: 14em; }
-  .top-infos .people-fraction {
-    background-image: url(../images/bonhomme.svg);
-    background-size: contain;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 1.3em;
-    font-weight: bold; }
-    .top-infos .people-fraction > * {
-      position: absolute;
-      left: calc(50% + 1em);
-      width: 50%;
-      transform: translateY(50%); }
-    .top-infos .people-fraction .number {
-      font-size: 4em;
-      color: #F62727; }
-
-.stackchart .content .DF-1-1 rect {
-  fill: #68B0CD; }
-
-.stackchart .content .DF-1-2 rect {
-  fill: #B8C30F; }
-
-.stackchart .content .DF-1-3 rect {
-  fill: #F8C738; }
-
-.stackchart .content .DF-1-4 rect {
-  fill: #F35D32; }
-
-.stackchart .content .DF-1-other rect {
-  fill: #c564a9; }
-
-.stackchart .content .DF-2-1 rect {
-  fill: #F35D32; }
-
-.stackchart .content .DF-2-2 rect {
-  fill: #F8C738; }
-
-.stackchart .content .DF-2-3 rect {
-  fill: #B8C30F; }
-
-.stackchart .content .DF-2-4 rect {
-  fill: #68B0CD; }
-
-.stackchart .content .DF-2-other rect {
-  fill: #c564a9; }
-
-.stackchart .legend-list .DF-1-1.color {
-  background-color: #68B0CD; }
-
-.stackchart .legend-list .DF-1-2.color {
-  background-color: #B8C30F; }
-
-.stackchart .legend-list .DF-1-3.color {
-  background-color: #F8C738; }
-
-.stackchart .legend-list .DF-1-4.color {
-  background-color: #F35D32; }
-
-.stackchart .legend-list .DF-1-other.color {
-  background-color: #c564a9; }
-
-.stackchart .legend-list .DF-2-1.color {
-  background-color: #F35D32; }
-
-.stackchart .legend-list .DF-2-2.color {
-  background-color: #F8C738; }
-
-.stackchart .legend-list .DF-2-3.color {
-  background-color: #B8C30F; }
-
-.stackchart .legend-list .DF-2-4.color {
-  background-color: #68B0CD; }
-
-.stackchart .legend-list .DF-2-other.color {
-  background-color: #c564a9; }
-
-.focus-detail.insertion .explanation .proportion {
-  background-color: #EC3500; }
-
-.focus-detail.handicap .explanation .proportion {
-  background-color: #F8C738; }
-
-.focus-detail.elderly .explanation .proportion {
-  background-color: #B8C30F; }
-
-.focus-detail.childhood .explanation .proportion {
-  background-color: #0E7FAB; }
+    flex-direction: row; }
+    .focus .top-infos > * {
+      flex: 1; }
+    .focus .top-infos > :nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: justify;
+      line-height: 1.4em;
+      font-size: 1.1em; }
+      .focus .top-infos > :nth-child(2) a {
+        width: 14em; }
+    .focus .top-infos .people-fraction {
+      background-image: url(../images/bonhomme.svg);
+      background-size: contain;
+      position: relative;
+      text-transform: uppercase;
+      font-size: 1.3em;
+      font-weight: bold; }
+      .focus .top-infos .people-fraction > * {
+        position: absolute;
+        left: calc(50% + 1em);
+        width: 50%;
+        transform: translateY(50%); }
+      .focus .top-infos .people-fraction .number {
+        font-size: 4em;
+        color: #F62727; }
+  .focus .stackchart .content .DF-1-1 rect {
+    fill: #68B0CD; }
+  .focus .stackchart .content .DF-1-2 rect {
+    fill: #B8C30F; }
+  .focus .stackchart .content .DF-1-3 rect {
+    fill: #F8C738; }
+  .focus .stackchart .content .DF-1-4 rect {
+    fill: #F35D32; }
+  .focus .stackchart .content .DF-1-other rect {
+    fill: #c564a9; }
+  .focus .stackchart .content .DF-2-1 rect {
+    fill: #F35D32; }
+  .focus .stackchart .content .DF-2-2 rect {
+    fill: #F8C738; }
+  .focus .stackchart .content .DF-2-3 rect {
+    fill: #B8C30F; }
+  .focus .stackchart .content .DF-2-4 rect {
+    fill: #68B0CD; }
+  .focus .stackchart .content .DF-2-other rect {
+    fill: #c564a9; }
+  .focus .stackchart .legend-list .DF-1-1.color {
+    background-color: #68B0CD; }
+  .focus .stackchart .legend-list .DF-1-2.color {
+    background-color: #B8C30F; }
+  .focus .stackchart .legend-list .DF-1-3.color {
+    background-color: #F8C738; }
+  .focus .stackchart .legend-list .DF-1-4.color {
+    background-color: #F35D32; }
+  .focus .stackchart .legend-list .DF-1-other.color {
+    background-color: #c564a9; }
+  .focus .stackchart .legend-list .DF-2-1.color {
+    background-color: #F35D32; }
+  .focus .stackchart .legend-list .DF-2-2.color {
+    background-color: #F8C738; }
+  .focus .stackchart .legend-list .DF-2-3.color {
+    background-color: #B8C30F; }
+  .focus .stackchart .legend-list .DF-2-4.color {
+    background-color: #68B0CD; }
+  .focus .stackchart .legend-list .DF-2-other.color {
+    background-color: #c564a9; }
+  .focus .focus-detail.insertion .explanation .proportion {
+    background-color: #EC3500; }
+  .focus .focus-detail.handicap .explanation .proportion {
+    background-color: #F8C738; }
+  .focus .focus-detail.elderly .explanation .proportion {
+    background-color: #B8C30F; }
+  .focus .focus-detail.childhood .explanation .proportion {
+    background-color: #0E7FAB; }
 
 .d3-axis line {
   stroke: #DDD;
