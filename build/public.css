@@ -58,6 +58,166 @@ body {
   justify-content: start;
   align-items: center; }
 
+.area-color-1 {
+  background-color: #0E7FAB;
+  fill: #0E7FAB; }
+  .area-color-1 rect, .area-color-1 circle, .area-color-1 path {
+    fill: #0E7FAB; }
+  .area-color-1.darker {
+    background-color: #06394d;
+    fill: #06394d; }
+    .area-color-1.darker rect, .area-color-1.darker circle, .area-color-1.darker path {
+      fill: #06394d; }
+  .area-color-1.lighter {
+    background-color: #31b9ee;
+    fill: #31b9ee; }
+    .area-color-1.lighter rect, .area-color-1.lighter circle, .area-color-1.lighter path {
+      fill: #31b9ee; }
+
+.area-color-2 {
+  background-color: #F8C738;
+  fill: #F8C738; }
+  .area-color-2 rect, .area-color-2 circle, .area-color-2 path {
+    fill: #F8C738; }
+  .area-color-2.darker {
+    background-color: #c39307;
+    fill: #c39307; }
+    .area-color-2.darker rect, .area-color-2.darker circle, .area-color-2.darker path {
+      fill: #c39307; }
+  .area-color-2.lighter {
+    background-color: #fbe39b;
+    fill: #fbe39b; }
+    .area-color-2.lighter rect, .area-color-2.lighter circle, .area-color-2.lighter path {
+      fill: #fbe39b; }
+
+.area-color-3 {
+  background-color: #EC3500;
+  fill: #EC3500; }
+  .area-color-3 rect, .area-color-3 circle, .area-color-3 path {
+    fill: #EC3500; }
+  .area-color-3.darker {
+    background-color: #861e00;
+    fill: #861e00; }
+    .area-color-3.darker rect, .area-color-3.darker circle, .area-color-3.darker path {
+      fill: #861e00; }
+  .area-color-3.lighter {
+    background-color: #ff7a53;
+    fill: #ff7a53; }
+    .area-color-3.lighter rect, .area-color-3.lighter circle, .area-color-3.lighter path {
+      fill: #ff7a53; }
+
+.area-color-4 {
+  background-color: #B8C30F;
+  fill: #B8C30F; }
+  .area-color-4 rect, .area-color-4 circle, .area-color-4 path {
+    fill: #B8C30F; }
+  .area-color-4.darker {
+    background-color: #5f6408;
+    fill: #5f6408; }
+    .area-color-4.darker rect, .area-color-4.darker circle, .area-color-4.darker path {
+      fill: #5f6408; }
+  .area-color-4.lighter {
+    background-color: #e6f147;
+    fill: #e6f147; }
+    .area-color-4.lighter rect, .area-color-4.lighter circle, .area-color-4.lighter path {
+      fill: #e6f147; }
+
+.area-color-5 {
+  background-color: #9C26B0;
+  fill: #9C26B0; }
+  .area-color-5 rect, .area-color-5 circle, .area-color-5 path {
+    fill: #9C26B0; }
+  .area-color-5.darker {
+    background-color: #52145c;
+    fill: #52145c; }
+    .area-color-5.darker rect, .area-color-5.darker circle, .area-color-5.darker path {
+      fill: #52145c; }
+  .area-color-5.lighter {
+    background-color: #ca5fdd;
+    fill: #ca5fdd; }
+    .area-color-5.lighter rect, .area-color-5.lighter circle, .area-color-5.lighter path {
+      fill: #ca5fdd; }
+
+.area-color-6 {
+  background-color: #019587;
+  fill: #019587; }
+  .area-color-6 rect, .area-color-6 circle, .area-color-6 path {
+    fill: #019587; }
+  .area-color-6.darker {
+    background-color: #00302b;
+    fill: #00302b; }
+    .area-color-6.darker rect, .area-color-6.darker circle, .area-color-6.darker path {
+      fill: #00302b; }
+  .area-color-6.lighter {
+    background-color: #02fae3;
+    fill: #02fae3; }
+    .area-color-6.lighter rect, .area-color-6.lighter circle, .area-color-6.lighter path {
+      fill: #02fae3; }
+
+.area-color-7 {
+  background-color: #795549;
+  fill: #795549; }
+  .area-color-7 rect, .area-color-7 circle, .area-color-7 path {
+    fill: #795549; }
+  .area-color-7.darker {
+    background-color: #392823;
+    fill: #392823; }
+    .area-color-7.darker rect, .area-color-7.darker circle, .area-color-7.darker path {
+      fill: #392823; }
+  .area-color-7.lighter {
+    background-color: #ae877a;
+    fill: #ae877a; }
+    .area-color-7.lighter rect, .area-color-7.lighter circle, .area-color-7.lighter path {
+      fill: #ae877a; }
+
+.area-color-8 {
+  background-color: #607C8A;
+  fill: #607C8A; }
+  .area-color-8 rect, .area-color-8 circle, .area-color-8 path {
+    fill: #607C8A; }
+  .area-color-8.darker {
+    background-color: #36464e;
+    fill: #36464e; }
+    .area-color-8.darker rect, .area-color-8.darker circle, .area-color-8.darker path {
+      fill: #36464e; }
+  .area-color-8.lighter {
+    background-color: #98adb8;
+    fill: #98adb8; }
+    .area-color-8.lighter rect, .area-color-8.lighter circle, .area-color-8.lighter path {
+      fill: #98adb8; }
+
+.area-color-9 {
+  background-color: #6739B6;
+  fill: #6739B6; }
+  .area-color-9 rect, .area-color-9 circle, .area-color-9 path {
+    fill: #6739B6; }
+  .area-color-9.darker {
+    background-color: #3b2168;
+    fill: #3b2168; }
+    .area-color-9.darker rect, .area-color-9.darker circle, .area-color-9.darker path {
+      fill: #3b2168; }
+  .area-color-9.lighter {
+    background-color: #9f7ed7;
+    fill: #9f7ed7; }
+    .area-color-9.lighter rect, .area-color-9.lighter circle, .area-color-9.lighter path {
+      fill: #9f7ed7; }
+
+.area-color-10 {
+  background-color: #FF5521;
+  fill: #FF5521; }
+  .area-color-10 rect, .area-color-10 circle, .area-color-10 path {
+    fill: #FF5521; }
+  .area-color-10.darker {
+    background-color: #ba2c00;
+    fill: #ba2c00; }
+    .area-color-10.darker rect, .area-color-10.darker circle, .area-color-10.darker path {
+      fill: #ba2c00; }
+  .area-color-10.lighter {
+    background-color: #ffa387;
+    fill: #ffa387; }
+    .area-color-10.lighter rect, .area-color-10.lighter circle, .area-color-10.lighter path {
+      fill: #ffa387; }
+
 .cd33-finance-dataviz {
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -82,56 +242,6 @@ body {
   justify-content: center;
   align-items: center;
   color: grey; }
-
-.area-color-1 {
-  background-color: #0E7FAB; }
-  .area-color-1 rect {
-    fill: #0E7FAB; }
-
-.area-color-2 {
-  background-color: #F8C738; }
-  .area-color-2 rect {
-    fill: #F8C738; }
-
-.area-color-3 {
-  background-color: #EC3500; }
-  .area-color-3 rect {
-    fill: #EC3500; }
-
-.area-color-4 {
-  background-color: #B8C30F; }
-  .area-color-4 rect {
-    fill: #B8C30F; }
-
-.area-color-5 {
-  background-color: #9C26B0; }
-  .area-color-5 rect {
-    fill: #9C26B0; }
-
-.area-color-6 {
-  background-color: #019587; }
-  .area-color-6 rect {
-    fill: #019587; }
-
-.area-color-7 {
-  background-color: #795549; }
-  .area-color-7 rect {
-    fill: #795549; }
-
-.area-color-8 {
-  background-color: #607C8A; }
-  .area-color-8 rect {
-    fill: #607C8A; }
-
-.area-color-9 {
-  background-color: #6739B6; }
-  .area-color-9 rect {
-    fill: #6739B6; }
-
-.area-color-10 {
-  background-color: #FF5521; }
-  .area-color-10 rect {
-    fill: #FF5521; }
 
 .appetizer {
   width: 58.3%;
@@ -225,56 +335,6 @@ body {
 
 .appetizer a {
   align-self: flex-end; }
-
-.area-color-1 {
-  background-color: #0E7FAB; }
-  .area-color-1 rect {
-    fill: #0E7FAB; }
-
-.area-color-2 {
-  background-color: #F8C738; }
-  .area-color-2 rect {
-    fill: #F8C738; }
-
-.area-color-3 {
-  background-color: #EC3500; }
-  .area-color-3 rect {
-    fill: #EC3500; }
-
-.area-color-4 {
-  background-color: #B8C30F; }
-  .area-color-4 rect {
-    fill: #B8C30F; }
-
-.area-color-5 {
-  background-color: #9C26B0; }
-  .area-color-5 rect {
-    fill: #9C26B0; }
-
-.area-color-6 {
-  background-color: #019587; }
-  .area-color-6 rect {
-    fill: #019587; }
-
-.area-color-7 {
-  background-color: #795549; }
-  .area-color-7 rect {
-    fill: #795549; }
-
-.area-color-8 {
-  background-color: #607C8A; }
-  .area-color-8 rect {
-    fill: #607C8A; }
-
-.area-color-9 {
-  background-color: #6739B6; }
-  .area-color-9 rect {
-    fill: #6739B6; }
-
-.area-color-10 {
-  background-color: #FF5521; }
-  .area-color-10 rect {
-    fill: #FF5521; }
 
 .budget-construction {
   position: relative; }
@@ -470,14 +530,10 @@ ol.legend-list {
 .stackchart .d3-axis .actionable {
   cursor: pointer; }
 
-.finance-element-pie .arc:nth-child(1) path {
-  fill: cornflowerblue; }
-
-.finance-element-pie .arc:nth-child(2) path {
-  fill: lightcyan; }
-
-.finance-element-pie .arc:nth-child(3) path {
-  fill: lightgrey; }
+.finance-element-pie {
+  background-color: transparent; }
+  .finance-element-pie circle {
+    fill: #AAA; }
 
 .finance-element {
   width: 100%;
@@ -513,7 +569,6 @@ ol.legend-list {
     text-decoration: none;
     min-height: 10em; }
     .finance-element .partition > a .part {
-      background-color: #0E7FAB;
       color: white;
       font-weight: bold;
       display: flex;
@@ -572,56 +627,6 @@ ol.legend-list {
 .sunburst .active-selection .slice.selected > .piece path {
   stroke: indianred;
   stroke-width: 2px; }
-
-.area-color-1 {
-  background-color: #0E7FAB; }
-  .area-color-1 rect {
-    fill: #0E7FAB; }
-
-.area-color-2 {
-  background-color: #F8C738; }
-  .area-color-2 rect {
-    fill: #F8C738; }
-
-.area-color-3 {
-  background-color: #EC3500; }
-  .area-color-3 rect {
-    fill: #EC3500; }
-
-.area-color-4 {
-  background-color: #B8C30F; }
-  .area-color-4 rect {
-    fill: #B8C30F; }
-
-.area-color-5 {
-  background-color: #9C26B0; }
-  .area-color-5 rect {
-    fill: #9C26B0; }
-
-.area-color-6 {
-  background-color: #019587; }
-  .area-color-6 rect {
-    fill: #019587; }
-
-.area-color-7 {
-  background-color: #795549; }
-  .area-color-7 rect {
-    fill: #795549; }
-
-.area-color-8 {
-  background-color: #607C8A; }
-  .area-color-8 rect {
-    fill: #607C8A; }
-
-.area-color-9 {
-  background-color: #6739B6; }
-  .area-color-9 rect {
-    fill: #6739B6; }
-
-.area-color-10 {
-  background-color: #FF5521; }
-  .area-color-10 rect {
-    fill: #FF5521; }
 
 .explore-budget {
   width: 100%;
@@ -805,56 +810,6 @@ ol.legend-list {
 .stackchart .d3-axis .actionable {
   cursor: pointer; }
 
-.area-color-1 {
-  background-color: #0E7FAB; }
-  .area-color-1 rect {
-    fill: #0E7FAB; }
-
-.area-color-2 {
-  background-color: #F8C738; }
-  .area-color-2 rect {
-    fill: #F8C738; }
-
-.area-color-3 {
-  background-color: #EC3500; }
-  .area-color-3 rect {
-    fill: #EC3500; }
-
-.area-color-4 {
-  background-color: #B8C30F; }
-  .area-color-4 rect {
-    fill: #B8C30F; }
-
-.area-color-5 {
-  background-color: #9C26B0; }
-  .area-color-5 rect {
-    fill: #9C26B0; }
-
-.area-color-6 {
-  background-color: #019587; }
-  .area-color-6 rect {
-    fill: #019587; }
-
-.area-color-7 {
-  background-color: #795549; }
-  .area-color-7 rect {
-    fill: #795549; }
-
-.area-color-8 {
-  background-color: #607C8A; }
-  .area-color-8 rect {
-    fill: #607C8A; }
-
-.area-color-9 {
-  background-color: #6739B6; }
-  .area-color-9 rect {
-    fill: #6739B6; }
-
-.area-color-10 {
-  background-color: #FF5521; }
-  .area-color-10 rect {
-    fill: #FF5521; }
-
 .focus-detail {
   display: flex;
   flex-direction: row;
@@ -1037,56 +992,6 @@ ol.legend-list {
 
 .stackchart .d3-axis .actionable {
   cursor: pointer; }
-
-.area-color-1 {
-  background-color: #0E7FAB; }
-  .area-color-1 rect {
-    fill: #0E7FAB; }
-
-.area-color-2 {
-  background-color: #F8C738; }
-  .area-color-2 rect {
-    fill: #F8C738; }
-
-.area-color-3 {
-  background-color: #EC3500; }
-  .area-color-3 rect {
-    fill: #EC3500; }
-
-.area-color-4 {
-  background-color: #B8C30F; }
-  .area-color-4 rect {
-    fill: #B8C30F; }
-
-.area-color-5 {
-  background-color: #9C26B0; }
-  .area-color-5 rect {
-    fill: #9C26B0; }
-
-.area-color-6 {
-  background-color: #019587; }
-  .area-color-6 rect {
-    fill: #019587; }
-
-.area-color-7 {
-  background-color: #795549; }
-  .area-color-7 rect {
-    fill: #795549; }
-
-.area-color-8 {
-  background-color: #607C8A; }
-  .area-color-8 rect {
-    fill: #607C8A; }
-
-.area-color-9 {
-  background-color: #6739B6; }
-  .area-color-9 rect {
-    fill: #6739B6; }
-
-.area-color-10 {
-  background-color: #FF5521; }
-  .area-color-10 rect {
-    fill: #FF5521; }
 
 .focus-detail.colleges .explanation .proportion {
   background-color: #EC3500; }
