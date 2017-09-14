@@ -218,6 +218,12 @@ body {
     .area-color-10.lighter rect, .area-color-10.lighter circle, .area-color-10.lighter path {
       fill: #ffa387; }
 
+.discrete-grey {
+  background-color: #AAA;
+  fill: #AAA; }
+  .discrete-grey rect, .discrete-grey circle, .discrete-grey path {
+    fill: #AAA; }
+
 .cd33-finance-dataviz {
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -522,6 +528,9 @@ ol.legend-list {
 .stackchart .content .brick text {
   fill: white; }
 
+.stackchart .content .brick.actionable {
+  cursor: pointer; }
+
 .stackchart .d3-axis .selected {
   font-weight: bold; }
   .stackchart .d3-axis .selected text {
@@ -532,8 +541,6 @@ ol.legend-list {
 
 .finance-element-pie {
   background-color: transparent; }
-  .finance-element-pie circle {
-    fill: #AAA; }
 
 .finance-element {
   width: 100%;
@@ -552,6 +559,7 @@ ol.legend-list {
         stroke: white;
         stroke-width: 3px; }
     .finance-element .top-infos > :nth-child(2) {
+      padding: 0 1em;
       flex: 2; }
   .finance-element h2 {
     clear: both; }
@@ -587,12 +595,15 @@ ol.legend-list {
       flex: 1; }
       .finance-element .partition > a .text h1 {
         font-size: 2em; }
+      .finance-element .partition > a .text .summary {
+        margin-bottom: 1em; }
     .finance-element .partition > a:not(:last-child)::before {
       content: '';
       transform: translateX(6em);
       border-left: 4px solid #D8D8D8;
-      height: 100%;
       width: 0; }
+  .finance-element .raw-data table thead tr > :nth-child(3), .finance-element .raw-data table tbody tr > :nth-child(3) {
+    text-align: right; }
 
 .sunburst .slice path {
   fill: #d4c685; }
@@ -638,23 +649,57 @@ ol.legend-list {
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
-    .explore-budget .viz > * {
+    .explore-budget .viz .revenue, .explore-budget .viz .expenditures {
       width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
+      .explore-budget .viz .revenue > div, .explore-budget .viz .expenditures > div {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end; }
+        .explore-budget .viz .revenue > div .areas, .explore-budget .viz .expenditures > div .areas {
+          width: 55%;
+          height: 100%;
+          display: flex;
+          flex-direction: column; }
+          .explore-budget .viz .revenue > div .areas > *, .explore-budget .viz .expenditures > div .areas > * {
+            margin-top: 0.5em;
+            min-height: 4em;
+            border-radius: 0.5em; }
+          .explore-budget .viz .revenue > div .areas h2, .explore-budget .viz .revenue > div .areas h3, .explore-budget .viz .expenditures > div .areas h2, .explore-budget .viz .expenditures > div .areas h3 {
+            color: white;
+            margin-left: 0.5em;
+            padding: 0; }
+          .explore-budget .viz .revenue > div .areas h2, .explore-budget .viz .expenditures > div .areas h2 {
+            font-size: 1em;
+            margin-top: 0.5em;
+            text-transform: uppercase;
+            font-weight: bold; }
+          .explore-budget .viz .revenue > div .areas h3, .explore-budget .viz .expenditures > div .areas h3 {
+            font-size: 0.9em;
+            text-transform: none;
+            font-weight: normal; }
+        .explore-budget .viz .revenue > div .texts, .explore-budget .viz .expenditures > div .texts {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 0 1em;
+          color: black; }
+          .explore-budget .viz .revenue > div .texts .amount, .explore-budget .viz .revenue > div .texts .unit, .explore-budget .viz .expenditures > div .texts .amount, .explore-budget .viz .expenditures > div .texts .unit {
+            font-weight: bold; }
+          .explore-budget .viz .revenue > div .texts .amount, .explore-budget .viz .expenditures > div .texts .amount {
+            font-size: 5em; }
+          .explore-budget .viz .revenue > div .texts .unit, .explore-budget .viz .expenditures > div .texts .unit {
+            transform: translateY(-1em); }
     .explore-budget .viz h1 {
       font-size: 1.6em;
       font-weight: bold;
       text-align: left;
       text-transform: uppercase; }
-    .explore-budget .viz > a {
+    .explore-budget .viz > * {
       text-decoration: none; }
-      .explore-budget .viz > a .rf, .explore-budget .viz > a .ri, .explore-budget .viz > a .df, .explore-budget .viz > a .di {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
     .explore-budget .viz .rf {
       background-color: #EC3500; }
     .explore-budget .viz .ri {
@@ -663,45 +708,6 @@ ol.legend-list {
       background-color: #F6A84E; }
     .explore-budget .viz .di {
       background-color: #F8C738; }
-  .explore-budget .expenditures > a, .explore-budget .revenue > a {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end; }
-    .explore-budget .expenditures > a .areas, .explore-budget .revenue > a .areas {
-      width: 55%;
-      height: 100%;
-      display: flex;
-      flex-direction: column; }
-      .explore-budget .expenditures > a .areas > *, .explore-budget .revenue > a .areas > * {
-        margin-top: 0.5em;
-        min-height: 4em;
-        border-radius: 0.5em; }
-      .explore-budget .expenditures > a .areas h2, .explore-budget .expenditures > a .areas h3, .explore-budget .revenue > a .areas h2, .explore-budget .revenue > a .areas h3 {
-        color: white;
-        margin-left: 0.5em;
-        padding: 0; }
-      .explore-budget .expenditures > a .areas h2, .explore-budget .revenue > a .areas h2 {
-        font-size: 1em;
-        margin-top: 0.5em;
-        text-transform: uppercase;
-        font-weight: bold; }
-      .explore-budget .expenditures > a .areas h3, .explore-budget .revenue > a .areas h3 {
-        font-size: 0.9em;
-        text-transform: none;
-        font-weight: normal; }
-    .explore-budget .expenditures > a .texts, .explore-budget .revenue > a .texts {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 0 1em;
-      color: black; }
-      .explore-budget .expenditures > a .texts .amount, .explore-budget .expenditures > a .texts .unit, .explore-budget .revenue > a .texts .amount, .explore-budget .revenue > a .texts .unit {
-        font-weight: bold; }
-      .explore-budget .expenditures > a .texts .amount, .explore-budget .revenue > a .texts .amount {
-        font-size: 5em; }
-      .explore-budget .expenditures > a .texts .unit, .explore-budget .revenue > a .texts .unit {
-        transform: translateY(-1em); }
   .explore-budget .m52-by-fonction {
     display: flex;
     flex-direction: row;
@@ -713,6 +719,8 @@ ol.legend-list {
       justify-content: center;
       align-items: center;
       flex: 2; }
+      .explore-budget .m52-by-fonction > :first-child .sunburst .slice {
+        cursor: pointer; }
     .explore-budget .m52-by-fonction > :nth-child(2) {
       display: flex;
       flex-direction: column;
@@ -801,6 +809,9 @@ ol.legend-list {
 
 .stackchart .content .brick text {
   fill: white; }
+
+.stackchart .content .brick.actionable {
+  cursor: pointer; }
 
 .stackchart .d3-axis .selected {
   font-weight: bold; }
@@ -984,6 +995,9 @@ ol.legend-list {
 
 .stackchart .content .brick text {
   fill: white; }
+
+.stackchart .content .brick.actionable {
+  cursor: pointer; }
 
 .stackchart .d3-axis .selected {
   font-weight: bold; }
