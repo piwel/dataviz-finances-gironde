@@ -648,7 +648,8 @@ ol.legend-list {
   .explore-budget .viz {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; }
+    justify-content: space-around;
+    margin-bottom: 1em; }
     .explore-budget .viz .revenue, .explore-budget .viz .expenditures {
       width: 50%;
       display: flex;
