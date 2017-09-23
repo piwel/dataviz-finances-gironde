@@ -19,11 +19,51 @@ body {
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  /*
+    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+    */
+  /*
+    Repeating the background mostly makes sense in the <body>. Otherwise, people usually want the image and preferably its center (not the top-right corner)
+    */
+  /*
+    Makes the hidden attribute works even when an element is styled display: flex
+    http://lists.w3.org/Archives/Public/public-whatwg-archive/2014May/0001.html
+    */
+  /*
+    In applications, there can be lists but HTML lists have bullet points and a bunch of useless styling attributes 
+    */
+  /* default iframe borders are just ugly */ }
   .cd33-finance-dataviz h2, .cd33-finance-dataviz h3 {
     margin: 0.2em 0; }
   .cd33-finance-dataviz p {
     max-width: 60em; }
+  .cd33-finance-dataviz *, .cd33-finance-dataviz *::before, .cd33-finance-dataviz *::after {
+    box-sizing: border-box;
+    /* if you really care about older browsers, add prefixed versions at your own risks */ }
+  .cd33-finance-dataviz *:not(body) {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+  .cd33-finance-dataviz [hidden] {
+    display: none !important; }
+  .cd33-finance-dataviz html, .cd33-finance-dataviz body {
+    padding: 0;
+    margin: 0; }
+  .cd33-finance-dataviz ul, .cd33-finance-dataviz ol, .cd33-finance-dataviz menu {
+    margin: 0;
+    padding: 0; }
+  .cd33-finance-dataviz ul, .cd33-finance-dataviz menu {
+    list-style: none; }
+  .cd33-finance-dataviz li {
+    margin: 0;
+    padding: 0; }
+  .cd33-finance-dataviz button {
+    cursor: pointer; }
+  .cd33-finance-dataviz iframe {
+    border: 0; }
+  .cd33-finance-dataviz * {
+    border-collapse: collapse; }
 
 .article > h2 {
   margin-bottom: 1em; }
@@ -779,7 +819,8 @@ ol.legend-list {
     align-items: center;
     margin-right: 1em; }
     .focus-detail .illustration img {
-      border-radius: 50%;
+      max-width: 13em;
+      max-height: 13em;
       object-fit: cover;
       margin-top: 3.2rem; }
   .focus-detail .explanation {
