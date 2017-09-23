@@ -1,53 +1,3 @@
-/*
-  http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-*/
-*, *:before, *:after {
-  box-sizing: border-box;
-  /* if you really care about older browsers, add prefixed versions at your own risks */ }
-
-/*
-  Repeating the background mostly makes sense in the <body>. Otherwise, people usually want the image and preferably its center (not the top-right corner)
-*/
-*:not(body) {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
-
-/*
-  Makes the hidden attribute works even when an element is styled display: flex
-  http://lists.w3.org/Archives/Public/public-whatwg-archive/2014May/0001.html
-*/
-[hidden] {
-  display: none !important; }
-
-html, body {
-  padding: 0;
-  margin: 0; }
-
-/*
-  In applications, there can be lists but HTML lists have bullet points and a bunch of useless styling attributes 
-*/
-ul, ol, menu {
-  margin: 0;
-  padding: 0; }
-
-ul, menu {
-  list-style: none; }
-
-li {
-  margin: 0;
-  padding: 0; }
-
-button {
-  cursor: pointer; }
-
-/* default iframe borders are just ugly */
-iframe {
-  border: 0; }
-
-* {
-  border-collapse: collapse; }
-
 html, body {
   height: 100%;
   width: 100%; }
@@ -57,6 +7,26 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: center; }
+
+.breadcrumb, #block-gironde-fr-local-tasks {
+  max-width: 1280px;
+  padding: 0 40px;
+  width: 100%;
+  margin: 0 auto; }
+
+.cd33-finance-dataviz {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .cd33-finance-dataviz h2, .cd33-finance-dataviz h3 {
+    margin: 0.2em 0; }
+  .cd33-finance-dataviz p {
+    max-width: 60em; }
+
+.article > h2 {
+  margin-bottom: 1em; }
 
 .area-color-1 {
   background-color: #0E7FAB;
@@ -223,31 +193,6 @@ body {
   fill: #AAA; }
   .discrete-grey rect, .discrete-grey circle, .discrete-grey path {
     fill: #AAA; }
-
-.cd33-finance-dataviz {
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .cd33-finance-dataviz h2, .cd33-finance-dataviz h3 {
-    margin: 0.2em 0; }
-  .cd33-finance-dataviz p {
-    max-width: 60em; }
-
-.article > h2 {
-  margin-bottom: 1em; }
-
-.placeholder {
-  width: 100%;
-  min-height: 6em;
-  border: 1px dashed grey;
-  border-radius: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: grey; }
 
 .appetizer {
   width: 58.3%;
