@@ -68,6 +68,9 @@ body {
 .article > h2 {
   margin-bottom: 1em; }
 
+.money-amount {
+  white-space: wrap; }
+
 .area-color-1 {
   background-color: #0E7FAB;
   fill: #0E7FAB; }
@@ -341,14 +344,14 @@ body {
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
-      width: 19%; }
+      width: 20%; }
       .budget-construction .bricks .brick-column > .legend {
         align-self: flex-start;
         display: flex;
         flex-direction: column;
         color: black;
         font-weight: bold; }
-        .budget-construction .bricks .brick-column > .legend .number {
+        .budget-construction .bricks .brick-column > .legend .money-amount {
           color: #BBB; }
         .budget-construction .bricks .brick-column > .legend .text {
           display: flex;
@@ -394,12 +397,12 @@ body {
             display: flex;
             flex-direction: column;
             color: white; }
-            .budget-construction .bricks .brick-column .parent .brick .legend .text, .budget-construction .bricks .brick-column .parent .brick .legend .amount {
+            .budget-construction .bricks .brick-column .parent .brick .legend .text, .budget-construction .bricks .brick-column .parent .brick .legend .money-amount {
               padding: 0;
               margin: 0; }
             .budget-construction .bricks .brick-column .parent .brick .legend .text {
               text-transform: uppercase; }
-            .budget-construction .bricks .brick-column .parent .brick .legend .amount {
+            .budget-construction .bricks .brick-column .parent .brick .legend .money-amount {
               font-weight: normal; }
           .budget-construction .bricks .brick-column .parent .brick.appear-by-height {
             transition-property: height;
@@ -553,6 +556,8 @@ ol.legend-list {
   .finance-element .atemporal ul, .finance-element .temporal ul {
     list-style: disc;
     list-style-position: inside; }
+    .finance-element .atemporal ul li p, .finance-element .temporal ul li p {
+      display: inline; }
   .finance-element .atemporal p {
     margin-top: 0; }
   .finance-element .temporal {
@@ -647,7 +652,7 @@ ol.legend-list {
         flex-direction: row;
         align-items: flex-end; }
         .explore-budget .viz .revenue > div .areas, .explore-budget .viz .expenditures > div .areas {
-          width: 55%;
+          width: 50%;
           height: 100%;
           display: flex;
           flex-direction: column; }
@@ -655,7 +660,7 @@ ol.legend-list {
             margin-top: 0.5em;
             min-height: 4em;
             border-radius: 0.5em; }
-          .explore-budget .viz .revenue > div .areas h2, .explore-budget .viz .revenue > div .areas h3, .explore-budget .viz .expenditures > div .areas h2, .explore-budget .viz .expenditures > div .areas h3 {
+          .explore-budget .viz .revenue > div .areas h2, .explore-budget .viz .revenue > div .areas .money-amount, .explore-budget .viz .expenditures > div .areas h2, .explore-budget .viz .expenditures > div .areas .money-amount {
             color: white;
             margin-left: 0.5em;
             padding: 0; }
@@ -664,7 +669,7 @@ ol.legend-list {
             margin-top: 0.5em;
             text-transform: uppercase;
             font-weight: bold; }
-          .explore-budget .viz .revenue > div .areas h3, .explore-budget .viz .expenditures > div .areas h3 {
+          .explore-budget .viz .revenue > div .areas .money-amount, .explore-budget .viz .expenditures > div .areas .money-amount {
             font-size: 0.9em;
             text-transform: none;
             font-weight: normal; }
@@ -675,12 +680,9 @@ ol.legend-list {
           justify-content: space-between;
           padding: 0 1em;
           color: black; }
-          .explore-budget .viz .revenue > div .texts .amount, .explore-budget .viz .revenue > div .texts .unit, .explore-budget .viz .expenditures > div .texts .amount, .explore-budget .viz .expenditures > div .texts .unit {
-            font-weight: bold; }
-          .explore-budget .viz .revenue > div .texts .amount, .explore-budget .viz .expenditures > div .texts .amount {
-            font-size: 5em; }
-          .explore-budget .viz .revenue > div .texts .unit, .explore-budget .viz .expenditures > div .texts .unit {
-            transform: translateY(-1em); }
+          .explore-budget .viz .revenue > div .texts .money-amount, .explore-budget .viz .expenditures > div .texts .money-amount {
+            font-weight: bold;
+            font-size: 3em; }
     .explore-budget .viz h1 {
       font-size: 1.6em;
       font-weight: bold;
