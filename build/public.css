@@ -299,9 +299,11 @@ body {
       width: 80%;
       border-color: #2d2d2d;
       margin: 0.7em; }
+    .appetizer.total-appetizer .markdown-rendered {
+      max-width: 80%; }
     .appetizer.total-appetizer p {
       line-height: 1.8em;
-      max-width: 80%; }
+      max-width: 100%; }
     .appetizer.total-appetizer a {
       align-self: center; }
 
