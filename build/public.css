@@ -14,6 +14,33 @@ body {
   width: 100%;
   margin: 0 auto; }
 
+.d3-axis line {
+  stroke: #DDD;
+  stroke-width: 1px; }
+
+.d3-axis text {
+  fill: grey; }
+
+.stackchart .content text.title {
+  font-size: 1.2em;
+  font-weight: bold; }
+  .stackchart .content text.title tspan:nth-child(2) {
+    font-weight: 100; }
+
+.stackchart .content .brick text {
+  fill: white; }
+
+.stackchart .content .brick.actionable {
+  cursor: pointer; }
+
+.stackchart .d3-axis .selected {
+  font-weight: bold; }
+  .stackchart .d3-axis .selected text {
+    fill: black; }
+
+.stackchart .d3-axis .actionable {
+  cursor: pointer; }
+
 .cd33-finance-dataviz {
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -257,8 +284,7 @@ body {
       border: 0;
       box-shadow: 0 0 2px black; }
       .appetizer p {
-        line-height: 1.8em;
-        max-width: 80%; } }
+        line-height: 1.8em; } }
   .appetizer:nth-child(odd) {
     align-self: flex-start; }
   .appetizer:nth-child(even) {
@@ -318,11 +344,16 @@ body {
       align-self: center; }
 
 .appetizer .info {
+  width: 100%;
   display: flex;
   flex-direction: column; }
   @media screen and (min-width: 950px) {
     .appetizer .info {
-      flex-direction: row; } }
+      flex-direction: row; }
+      .appetizer .info .number {
+        width: 45%; }
+      .appetizer .info .markdown-rendered {
+        width: 60%; } }
   .appetizer .info .number {
     text-align: right;
     border: 0;
@@ -343,7 +374,7 @@ body {
     .appetizer .info .number .secundary {
       font-size: 1.5em;
       text-transform: uppercase; }
-  .appetizer .info p {
+  .appetizer .info .markdown-rendered {
     padding-left: 1em; }
 
 .appetizer a {
@@ -363,6 +394,7 @@ body {
       align-items: center;
       width: 20%; }
       .budget-construction .bricks .brick-column > .legend {
+        width: 100%;
         align-self: flex-start;
         display: flex;
         flex-direction: column;
@@ -371,6 +403,7 @@ body {
         .budget-construction .bricks .brick-column > .legend .money-amount {
           color: #BBB; }
         .budget-construction .bricks .brick-column > .legend .text {
+          width: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -502,9 +535,10 @@ body {
     max-width: 100%; }
     @media screen and (min-width: 950px) {
       .home .appetizers-container {
-        background: url("../images/map-optimised.jpg"), #BEBC05;
+        background-image: url("../images/map-optimised.jpg");
+        background-color: #BEBC05;
         min-height: 2470px;
-        margin-top: 9em; } }
+        margin-top: 150px; } }
     .home .appetizers-container .appetizers {
       max-width: 1280px;
       display: flex;
@@ -520,36 +554,6 @@ ol.legend-list {
     height: 1em;
     width: 1em;
     vertical-align: middle; }
-
-.d3-axis line {
-  stroke: #DDD;
-  stroke-width: 1px; }
-
-.d3-axis text {
-  fill: grey; }
-
-.stackchart .content text.title {
-  font-size: 1.2em;
-  font-weight: bold;
-  paint-order: stroke;
-  stroke: #fff;
-  stroke-width: 2px; }
-  .stackchart .content text.title tspan:nth-child(2) {
-    font-weight: 100; }
-
-.stackchart .content .brick text {
-  fill: white; }
-
-.stackchart .content .brick.actionable {
-  cursor: pointer; }
-
-.stackchart .d3-axis .selected {
-  font-weight: bold; }
-  .stackchart .d3-axis .selected text {
-    fill: black; }
-
-.stackchart .d3-axis .actionable {
-  cursor: pointer; }
 
 .finance-element-pie {
   background-color: transparent; }
@@ -806,36 +810,6 @@ ol.legend-list {
     .explore-budget .m52-by-fonction .legend-list .color.M52-DF-R9, .explore-budget .m52-by-fonction .legend-list .color.M52-DI-R9 {
       background-color: #FF5521; }
 
-.d3-axis line {
-  stroke: #DDD;
-  stroke-width: 1px; }
-
-.d3-axis text {
-  fill: grey; }
-
-.stackchart .content text.title {
-  font-size: 1.2em;
-  font-weight: bold;
-  paint-order: stroke;
-  stroke: #fff;
-  stroke-width: 2px; }
-  .stackchart .content text.title tspan:nth-child(2) {
-    font-weight: 100; }
-
-.stackchart .content .brick text {
-  fill: white; }
-
-.stackchart .content .brick.actionable {
-  cursor: pointer; }
-
-.stackchart .d3-axis .selected {
-  font-weight: bold; }
-  .stackchart .d3-axis .selected text {
-    fill: black; }
-
-.stackchart .d3-axis .actionable {
-  cursor: pointer; }
-
 .focus-detail {
   display: flex;
   flex-direction: row;
@@ -957,7 +931,8 @@ ol.legend-list {
       transform: translateX(-20%); }
       @media screen and (min-width: 950px) {
         .focus .top-infos .people-fraction {
-          transform: initial; } }
+          transform: initial;
+          min-width: 0; } }
       .focus .top-infos .people-fraction > * {
         position: absolute;
         left: calc(50% + 1em);
@@ -1025,36 +1000,6 @@ ol.legend-list {
     background-color: #B8C30F; }
   .focus .focus-detail.childhood .explanation .proportion {
     background-color: #0E7FAB; }
-
-.d3-axis line {
-  stroke: #DDD;
-  stroke-width: 1px; }
-
-.d3-axis text {
-  fill: grey; }
-
-.stackchart .content text.title {
-  font-size: 1.2em;
-  font-weight: bold;
-  paint-order: stroke;
-  stroke: #fff;
-  stroke-width: 2px; }
-  .stackchart .content text.title tspan:nth-child(2) {
-    font-weight: 100; }
-
-.stackchart .content .brick text {
-  fill: white; }
-
-.stackchart .content .brick.actionable {
-  cursor: pointer; }
-
-.stackchart .d3-axis .selected {
-  font-weight: bold; }
-  .stackchart .d3-axis .selected text {
-    fill: black; }
-
-.stackchart .d3-axis .actionable {
-  cursor: pointer; }
 
 .focus-detail.colleges .explanation .proportion {
   background-color: #EC3500; }
