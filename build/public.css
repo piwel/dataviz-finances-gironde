@@ -21,10 +21,10 @@ body {
 .d3-axis text {
   fill: grey; }
 
-.stackchart .content text.title {
+.stackchart .content text.stackchart-title {
   font-size: 1.2em;
   font-weight: bold; }
-  .stackchart .content text.title tspan:nth-child(2) {
+  .stackchart .content text.stackchart-title tspan:nth-child(2) {
     font-weight: 100; }
 
 .stackchart .content .brick text {
@@ -32,6 +32,13 @@ body {
 
 .stackchart .content .brick.actionable {
   cursor: pointer; }
+
+.stackchart.portrait .content text.stackchart-title {
+  font-size: 1em;
+  font-weight: normal; }
+
+.stackchart.portrait .d3-axis.x .tick text {
+  fill: black; }
 
 .stackchart .d3-axis .selected {
   font-weight: bold; }
@@ -591,38 +598,6 @@ ol.legend-list {
     margin-top: 0; }
   .finance-element .temporal {
     margin-top: 2em; }
-  .finance-element .partition > a {
-    display: flex;
-    flex-direction: row;
-    color: black;
-    text-decoration: none;
-    min-height: 10em; }
-    .finance-element .partition > a .part {
-      color: white;
-      font-weight: bold;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0.5em;
-      border: 2px solid white;
-      width: 12em;
-      min-height: 2.5em;
-      z-index: 1; }
-    .finance-element .partition > a .text {
-      margin-left: 2em;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      padding-bottom: 1em;
-      flex: 1; }
-      .finance-element .partition > a .text h1 {
-        font-size: 2em; }
-      .finance-element .partition > a .text .summary {
-        margin-bottom: 1em; }
-    .finance-element .partition > a:not(:last-child)::before {
-      content: '';
-      transform: translateX(6em);
-      border-left: 4px solid #D8D8D8;
-      width: 0; }
   .finance-element .raw-data table thead tr > :nth-child(3), .finance-element .raw-data table tbody tr > :nth-child(3) {
     text-align: right; }
 
