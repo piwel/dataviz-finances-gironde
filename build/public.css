@@ -399,7 +399,8 @@ body {
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
-      width: 20%; }
+      min-width: 17em;
+      margin: 0 1em; }
       .budget-construction .bricks .brick-column > .legend {
         width: 100%;
         align-self: flex-start;
@@ -499,19 +500,23 @@ body {
     .budget-construction dl dd {
       margin: 0;
       margin-bottom: 1em; }
-  .budget-construction .replay {
+  .budget-construction .play {
     position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
+    top: 2em;
+    right: 2em;
+    opacity: 1;
     font-size: 1.2em;
     padding: 1em;
     color: white;
     background-color: #D2D2D2;
     text-transform: uppercase;
     transition-property: opacity; }
-    .budget-construction .replay::disabled {
+    .budget-construction .play[disabled] {
       cursor: default; }
+  .budget-construction.video dl .column {
+    opacity: 1; }
+  .budget-construction.video video {
+    width: 95vw; }
 
 .budget-construction .bricks .brick {
   animation-fill-mode: forwards; }
@@ -637,29 +642,44 @@ ol.legend-list {
 
 .explore-budget {
   width: 100%;
-  max-width: 1280px;
-  padding: 0 40px; }
+  padding: 0 0.5em; }
+  @media screen and (min-width: 600px) {
+    .explore-budget {
+      max-width: 1280px;
+      padding: 0 40px; } }
   .explore-budget section {
     margin-bottom: 3em; }
   .explore-budget .viz {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     margin-bottom: 1em; }
+    @media screen and (min-width: 800px) {
+      .explore-budget .viz {
+        flex-direction: row; } }
     .explore-budget .viz .revenue, .explore-budget .viz .expenditures {
-      width: 50%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
+      @media screen and (min-width: 800px) {
+        .explore-budget .viz .revenue, .explore-budget .viz .expenditures {
+          width: 50%; } }
       .explore-budget .viz .revenue > div, .explore-budget .viz .expenditures > div {
         display: flex;
-        flex-direction: row;
-        align-items: flex-end; }
+        flex-direction: column-reverse; }
+        @media screen and (min-width: 800px) {
+          .explore-budget .viz .revenue > div, .explore-budget .viz .expenditures > div {
+            flex-direction: row;
+            align-items: flex-end; } }
         .explore-budget .viz .revenue > div .areas, .explore-budget .viz .expenditures > div .areas {
-          width: 50%;
+          width: 100%;
           height: 100%;
           display: flex;
           flex-direction: column; }
+          @media screen and (min-width: 800px) {
+            .explore-budget .viz .revenue > div .areas, .explore-budget .viz .expenditures > div .areas {
+              width: 50%; } }
           .explore-budget .viz .revenue > div .areas > *, .explore-budget .viz .expenditures > div .areas > * {
             margin-top: 0.5em;
             min-height: 4em;
@@ -678,12 +698,14 @@ ol.legend-list {
             text-transform: none;
             font-weight: normal; }
         .explore-budget .viz .revenue > div .texts, .explore-budget .viz .expenditures > div .texts {
-          height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           padding: 0 1em;
           color: black; }
+          @media screen and (min-width: 800px) {
+            .explore-budget .viz .revenue > div .texts, .explore-budget .viz .expenditures > div .texts {
+              height: 100%; } }
           .explore-budget .viz .revenue > div .texts .money-amount, .explore-budget .viz .expenditures > div .texts .money-amount {
             font-weight: bold;
             font-size: 3em; }
