@@ -567,8 +567,34 @@ ol.legend-list {
     width: 1em;
     vertical-align: middle; }
 
-.finance-element-pie {
-  background-color: transparent; }
+.finance-element-context {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .finance-element-context a {
+    text-decoration: underline; }
+    .finance-element-context a .text {
+      text-decoration: underline; }
+  .finance-element-context > * {
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2em;
+    white-space: nowrap; }
+    .finance-element-context > *:not(:first-child) > * {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center; }
+  .finance-element-context .text {
+    margin-left: 0.5em; }
+    .finance-element-context .text:nth-child(2) {
+      color: black; }
 
 .finance-element {
   width: 100%;
@@ -581,17 +607,9 @@ ol.legend-list {
     margin-bottom: 5em; }
   .finance-element .top-infos {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start; }
-    .finance-element .top-infos svg {
-      flex: 1; }
-      .finance-element .top-infos svg circle, .finance-element .top-infos svg path {
-        stroke: white;
-        stroke-width: 3px; }
-    .finance-element .top-infos > :nth-child(2) {
-      padding: 0 1em;
-      flex: 2; }
   .finance-element h2 {
     clear: both; }
   .finance-element .atemporal ul, .finance-element .temporal ul {
