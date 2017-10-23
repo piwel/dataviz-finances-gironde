@@ -935,7 +935,7 @@ ol.legend-list {
       .focus .top-infos > :nth-child(2) a {
         width: 14em; }
     .focus .top-infos .people-fraction {
-      background-image: url(../images/bonhomme.svg);
+      background-image: url("../images/bonhomme.svg");
       background-size: contain;
       position: relative;
       text-transform: uppercase;
