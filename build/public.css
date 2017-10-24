@@ -959,6 +959,10 @@ ol.legend-list {
   .focus .stackchart {
     display: flex;
     flex-direction: column; }
+    .focus .stackchart .over-time {
+      flex: 2; }
+    .focus .stackchart .legend-list {
+      flex: 1; }
     @media screen and (min-width: 800px) {
       .focus .stackchart {
         align-items: flex-start; } }
