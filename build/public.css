@@ -566,9 +566,12 @@ ol.legend-list {
     height: 1em;
     width: 1em;
     vertical-align: middle; }
+  ol.legend-list a {
+    text-decoration: underline; }
 
 .finance-element-context {
   width: 100%;
+  max-width: 60em;
   display: flex;
   flex-direction: column;
   align-items: flex-start; }
@@ -583,14 +586,16 @@ ol.legend-list {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 2em;
+    margin-bottom: 0.4em;
+    height: 2.2em;
     white-space: nowrap; }
-    .finance-element-context > *:not(:first-child) > * {
+    .finance-element-context > * > * {
       height: 100%;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      align-items: center; }
+      align-items: center;
+      border-radius: 0.3em; }
   .finance-element-context .text {
     margin-left: 0.5em; }
     .finance-element-context .text:nth-child(2) {
@@ -842,6 +847,7 @@ ol.legend-list {
       object-fit: cover;
       margin-top: 3.2rem; }
   .focus-detail .explanation {
+    position: relative;
     flex: 4; }
     .focus-detail .explanation > * {
       display: block;
@@ -851,7 +857,10 @@ ol.legend-list {
       .focus-detail .explanation > *:last-child {
         margin-bottom: 0; }
     .focus-detail .explanation > a.btn {
-      width: 15em; }
+      width: 15em;
+      position: relative;
+      left: 100%;
+      transform: translateX(-100%); }
     .focus-detail .explanation h3 {
       font-size: 1.6em;
       text-transform: uppercase; }
@@ -861,7 +870,7 @@ ol.legend-list {
       background-color: #F0F0F0; }
       .focus-detail .explanation .proportion-container .proportion {
         height: 100%;
-        color: white;
+        color: black;
         font-size: 1.2em;
         font-weight: bold;
         padding: 0.1em 1em; }
@@ -1021,16 +1030,16 @@ ol.legend-list {
     background-color: #0E7FAB; }
 
 .focus-detail.colleges .explanation .proportion {
-  background-color: #EC3500; }
+  background-color: #0E7FAB; }
 
 .focus-detail.roads .explanation .proportion {
-  background-color: #F8C738; }
+  background-color: #0E7FAB; }
 
 .focus-detail.buildings .explanation .proportion {
-  background-color: #B8C30F; }
+  background-color: #0E7FAB; }
 
 .focus-detail.environment .explanation .proportion {
   background-color: #0E7FAB; }
 
 .focus-detail.city-subsidy .explanation .proportion {
-  background-color: #9C26B0; }
+  background-color: #F8C738; }
