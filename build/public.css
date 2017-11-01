@@ -1043,3 +1043,7 @@ ol.legend-list {
 
 .focus-detail.city-subsidy .explanation .proportion {
   background-color: #F8C738; }
+
+.focus.presence .focus-map iframe {
+  width: 100%;
+  height: 80vh; }
