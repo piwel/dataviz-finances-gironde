@@ -98,6 +98,12 @@ body {
     border: 0; }
   .cd33-finance-dataviz * {
     border-collapse: collapse; }
+  .cd33-finance-dataviz .markdown-rendered {
+    max-width: 60em; }
+    .cd33-finance-dataviz .markdown-rendered ul, .cd33-finance-dataviz .markdown-rendered ol {
+      list-style: initial;
+      padding: initial;
+      margin: 1em; }
 
 .article > h2 {
   margin-bottom: 1em; }
@@ -880,7 +886,7 @@ ol.legend-list {
     .focus-detail .illustration img {
       max-width: 13em;
       max-height: 13em;
-      object-fit: cover;
+      object-fit: contain;
       margin-top: 3.2rem; }
   .focus-detail .explanation {
     position: relative;
