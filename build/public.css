@@ -529,6 +529,11 @@ body {
     transition-property: opacity; }
     .budget-construction .play[disabled] {
       cursor: default; }
+  .budget-construction .text-area {
+    width: 40%;
+    position: absolute;
+    top: 5em;
+    right: 5%; }
   .budget-construction.video dl .column {
     opacity: 1; }
   .budget-construction.video video {
