@@ -521,10 +521,6 @@ body {
     top: 2em;
     right: 2em;
     opacity: 1;
-    font-size: 1.2em;
-    padding: 1em;
-    color: white;
-    background-color: #D2D2D2;
     text-transform: uppercase;
     transition-property: opacity; }
     .budget-construction .play[disabled] {
@@ -619,7 +615,10 @@ ol.legend-list {
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      border-radius: 0.3em; }
+      border-radius: 0.3em;
+      width: 0;
+      transition: width 0.4s ease;
+      will-change: width; }
   .finance-element-context .text {
     margin-left: 0.5em; }
     .finance-element-context .text:nth-child(2) {
