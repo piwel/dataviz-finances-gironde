@@ -106,7 +106,8 @@ body {
       margin: 1em; }
 
 .article > h2 {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  margin-top: 2em; }
 
 .money-amount {
   white-space: wrap; }
@@ -721,6 +722,7 @@ ol.legend-list {
         flex-direction: row; } }
     .explore-budget .viz .revenue, .explore-budget .viz .expenditures {
       width: 100%;
+      margin-bottom: 2em;
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
@@ -737,7 +739,7 @@ ol.legend-list {
         .explore-budget .viz .revenue > div .areas, .explore-budget .viz .expenditures > div .areas {
           width: 100%;
           height: 100%;
-          max-height: 70vh;
+          max-height: 60vh;
           display: flex;
           flex-direction: column; }
           @media screen and (min-width: 800px) {
@@ -757,26 +759,37 @@ ol.legend-list {
             text-transform: uppercase;
             font-weight: bold; }
           .explore-budget .viz .revenue > div .areas .money-amount, .explore-budget .viz .expenditures > div .areas .money-amount {
-            font-size: 0.9em;
+            font-size: 1em;
             text-transform: none;
             font-weight: normal; }
+            @media screen and (min-width: 800px) {
+              .explore-budget .viz .revenue > div .areas .money-amount, .explore-budget .viz .expenditures > div .areas .money-amount {
+                font-size: 0.9em; } }
         .explore-budget .viz .revenue > div .texts, .explore-budget .viz .expenditures > div .texts {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          padding: 0 1em;
           color: black; }
-          @media screen and (min-width: 800px) {
-            .explore-budget .viz .revenue > div .texts, .explore-budget .viz .expenditures > div .texts {
-              height: 100%; } }
           .explore-budget .viz .revenue > div .texts .money-amount, .explore-budget .viz .expenditures > div .texts .money-amount {
             font-weight: bold;
-            font-size: 3em; }
+            font-size: 2em; }
+          @media screen and (min-width: 800px) {
+            .explore-budget .viz .revenue > div .texts, .explore-budget .viz .expenditures > div .texts {
+              height: 100%;
+              padding: 0 1em; }
+              .explore-budget .viz .revenue > div .texts .money-amount, .explore-budget .viz .expenditures > div .texts .money-amount {
+                font-size: 3em; } }
     .explore-budget .viz h1 {
       font-size: 1.6em;
       font-weight: bold;
       text-align: left;
       text-transform: uppercase; }
+      @media screen and (min-width: 800px) {
+        .explore-budget .viz h1 {
+          color: black;
+          text-decoration: none; }
+          .explore-budget .viz h1:hover {
+            color: black; } }
     .explore-budget .viz > * {
       text-decoration: none; }
     .explore-budget .viz .rf {
@@ -787,6 +800,11 @@ ol.legend-list {
       background-color: #F6A84E; }
     .explore-budget .viz .di {
       background-color: #F8C738; }
+    .explore-budget .viz .btn {
+      display: none; }
+      @media screen and (min-width: 800px) {
+        .explore-budget .viz .btn {
+          display: block; } }
   .explore-budget .m52-by-fonction {
     display: flex;
     flex-direction: column;
@@ -811,7 +829,8 @@ ol.legend-list {
     .explore-budget .m52-by-fonction .display-choice {
       display: flex;
       flex-direction: row;
-      align-items: center; }
+      align-items: center;
+      margin: 1em 0 2em 0; }
       .explore-budget .m52-by-fonction .display-choice .radio {
         margin-left: 0.5em;
         display: flex;
@@ -939,8 +958,7 @@ ol.legend-list {
         margin-bottom: 0.8rem; }
         @media screen and (min-width: 950px) {
           .focus-detail .explanation .highlights > *:not(:first-child) {
-            margin-left: 0.8rem;
-            margin-bottom: 0; } }
+            margin-left: 0.8rem; } }
         .focus-detail .explanation .highlights > * strong, .focus-detail .explanation .highlights > * span {
           display: block; }
         .focus-detail .explanation .highlights > * strong {
@@ -994,6 +1012,9 @@ ol.legend-list {
       text-align: justify;
       line-height: 1.4em;
       font-size: 1.1em; }
+      @media screen and (min-width: 950px) {
+        .focus .top-infos > :nth-child(2) {
+          margin: 0 1em; } }
       .focus .top-infos > :nth-child(2) a {
         width: 14em; }
     .focus .top-infos .people-fraction {
@@ -1013,11 +1034,14 @@ ol.legend-list {
           min-width: 0; } }
       .focus .top-infos .people-fraction > * {
         position: absolute;
-        left: calc(50% + 1em);
+        left: calc(50% + 0.5em);
         width: 50%;
-        transform: translateY(50%); }
+        transform: translateY(30%); }
+        @media screen and (min-width: 950px) {
+          .focus .top-infos .people-fraction > * {
+            transform: translateY(50%); } }
       .focus .top-infos .people-fraction .number {
-        font-size: 4em;
+        font-size: 3em;
         color: #F62727; }
   .focus .stackchart {
     display: flex;
@@ -1035,54 +1059,14 @@ ol.legend-list {
         flex-direction: row;
         justify-content: space-around;
         align-items: center; } }
-    .focus .stackchart .content .DF-1-1 rect {
-      fill: #68B0CD; }
-    .focus .stackchart .content .DF-1-2 rect {
-      fill: #B8C30F; }
-    .focus .stackchart .content .DF-1-3 rect {
-      fill: #F8C738; }
-    .focus .stackchart .content .DF-1-4 rect {
-      fill: #F35D32; }
-    .focus .stackchart .content .DF-1-other rect {
-      fill: #c564a9; }
-    .focus .stackchart .content .DF-2-1 rect {
-      fill: #F35D32; }
-    .focus .stackchart .content .DF-2-2 rect {
-      fill: #F8C738; }
-    .focus .stackchart .content .DF-2-3 rect {
-      fill: #B8C30F; }
-    .focus .stackchart .content .DF-2-4 rect {
-      fill: #68B0CD; }
-    .focus .stackchart .content .DF-2-other rect {
-      fill: #c564a9; }
-    .focus .stackchart .legend-list .DF-1-1.color {
-      background-color: #68B0CD; }
-    .focus .stackchart .legend-list .DF-1-2.color {
-      background-color: #B8C30F; }
-    .focus .stackchart .legend-list .DF-1-3.color {
-      background-color: #F8C738; }
-    .focus .stackchart .legend-list .DF-1-4.color {
-      background-color: #F35D32; }
-    .focus .stackchart .legend-list .DF-1-other.color {
-      background-color: #c564a9; }
-    .focus .stackchart .legend-list .DF-2-1.color {
-      background-color: #F35D32; }
-    .focus .stackchart .legend-list .DF-2-2.color {
-      background-color: #F8C738; }
-    .focus .stackchart .legend-list .DF-2-3.color {
-      background-color: #B8C30F; }
-    .focus .stackchart .legend-list .DF-2-4.color {
-      background-color: #68B0CD; }
-    .focus .stackchart .legend-list .DF-2-other.color {
-      background-color: #c564a9; }
   .focus .focus-detail.insertion .explanation .proportion {
-    background-color: #EC3500; }
+    background-color: #0E7FAB; }
   .focus .focus-detail.handicap .explanation .proportion {
     background-color: #F8C738; }
   .focus .focus-detail.elderly .explanation .proportion {
-    background-color: #B8C30F; }
+    background-color: #EC3500; }
   .focus .focus-detail.childhood .explanation .proportion {
-    background-color: #0E7FAB; }
+    background-color: #B8C30F; }
 
 .focus-detail.colleges .explanation .proportion {
   background-color: #0E7FAB; }
