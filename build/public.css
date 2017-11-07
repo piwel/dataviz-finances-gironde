@@ -527,10 +527,11 @@ body {
     .budget-construction .play[disabled] {
       cursor: default; }
   .budget-construction .text-area {
-    width: 40%;
-    position: absolute;
-    top: 5em;
-    right: 5%; }
+    width: 60%;
+    height: 5em;
+    margin: 1em 0;
+    transform: translateX(30%);
+    text-align: center; }
   .budget-construction.video dl .column {
     opacity: 1; }
   .budget-construction.video video {
