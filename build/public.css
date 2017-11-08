@@ -535,7 +535,8 @@ body {
   .budget-construction.video dl .column {
     opacity: 1; }
   .budget-construction.video video {
-    width: 95vw; }
+    width: 95vw;
+    max-width: 100%; }
 
 .budget-construction .bricks .brick {
   animation-fill-mode: forwards; }
