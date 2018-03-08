@@ -861,9 +861,7 @@ D 91 6568 (151 221,00 €) utilisé dans DF-3-7-3, DF-6-4
                 (
                     article.startsWith('20') ||
                     article.startsWith('21') ||
-                    article.startsWith('23') ||
-                    // ajout des investissements effectués pour le compte de tiers articles 1321/1324 fonction 621
-                    article.startsWith('13')
+                    article.startsWith('23')
                 ) &&
                 !article.startsWith('204') &&
                 ['621', '622', '628'].includes(f3);
@@ -971,6 +969,7 @@ D 91 6568 (151 221,00 €) utilisé dans DF-3-7-3, DF-6-4
                     '204113', '1321','2748','1328','13278'
                 ].includes(article) &&
                 fonction !== '72' &&
+                article.startsWith('13') &&
                 !(article === '204152' && fonction === '93') &&
                 !(article === '1321' && fonction === '621') &&
                 !(article === '204182' && fonction === '68');
