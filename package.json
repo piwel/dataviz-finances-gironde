@@ -23,7 +23,7 @@
     "prebuild:public:data:m52-strings": "npm run prepare:plan-de-compte",
     "build:public:data:m52-strings": "node -r esm tools/make-doc-budg-strings.js",
     "watch:m52overview": "cross-env NODE_ENV=development watchify --iw **/node_modules/** src/m52-overview/js/main.js -o build/m52-overview-bundle.js -d -v",
-    "prewatch:public": "npm run build:public:data:m52-strings",
+    "prewatch:public": "npm-run-all build:public:data:m52-strings build:public:data:finance-data",
     "watch:public": "cross-env NODE_ENV=development npm-run-all --parallel watch:public:*",
     "prewatch:public:style": "npm run build:public:style",
     "watch:public:style": "node-sass --importer src/public/style/env-importer.js --watch src/public/style/main.scss build/public.css",
